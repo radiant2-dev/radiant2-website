@@ -41,7 +41,7 @@ function App() {
             </h2>
             <h3
               className="text-4xl font-mono"
-              style={{ textShadow: "0 0 24px rgba(255, 255, 255, 0.45)" }}
+              style={{ textShadow: "0 0 64px rgba(255, 255, 255, 0.6)" }}
             >
               Supercharge your company<br />
               with AI {" "}
