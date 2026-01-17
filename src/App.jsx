@@ -20,6 +20,26 @@ function App() {
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Our Offer</h2>
           <p className="text-sm text-slate-600">Offer details placeholder.</p>
+          <div className="grid gap-4 pt-2 text-sm text-slate-700 sm:grid-cols-3">
+            <div className="space-y-2 border-l-[3px] border-black pl-4">
+              <h3 className="text-lg font-semibold text-slate-900">
+                AI solutions
+              </h3>
+              <p className="text-sm text-slate-600">Description placeholder.</p>
+            </div>
+            <div className="space-y-2 border-l-[3px] border-black pl-4">
+              <h3 className="text-lg font-semibold text-slate-900">
+                Machine learning RnD
+              </h3>
+              <p className="text-sm text-slate-600">Description placeholder.</p>
+            </div>
+            <div className="space-y-2 border-l-[3px] border-black pl-4">
+              <h3 className="text-lg font-semibold text-slate-900">
+                AI training &amp; workshops
+              </h3>
+              <p className="text-sm text-slate-600">Description placeholder.</p>
+            </div>
+          </div>
         </section>
 
         <section className="space-y-3">
