@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Typewriter from 'typewriter-effect';
 
 const responsive = {
   superLargeDesktop: {
@@ -31,10 +32,28 @@ function App() {
         </div>
       </header>
 
-      <section className="min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
-        <div className="mx-auto max-w-5xl space-y-3 px-6 pt-6">
-          <h2 className="text-6xl font-semibold">Hero</h2>
-          <p className="text-sm">Hero content placeholder.</p>
+      <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
+        <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
+        <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-6xl font-semibold">
+            Radial Vision
+          </h2>
+          <h3
+            className="text-4xl font-mono"
+            style={{ textShadow: "0 0 24px rgba(255, 255, 255, 0.45)" }}
+          >
+          Supercharge you bussiness<br/>
+          with AI {" "}
+          <span className="inline-block align-baseline">
+            <Typewriter
+              options={{
+                strings: ["for bussiness automation", "for industrial processes", "workshops"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
+          </h3>
         </div>
       </section>
 
