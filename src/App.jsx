@@ -1,3 +1,25 @@
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
 function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -45,6 +67,50 @@ function App() {
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Our Team</h2>
           <p className="text-sm text-slate-600">Team profiles placeholder.</p>
+          <h3 className="pt-2 text-lg font-semibold text-slate-900">
+            We have worked with
+          </h3>
+          <Carousel
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024
+                },
+                items: 3,
+              }
+            }
+            }
+            autoPlay={true}
+            arrows={false}
+            centerMode={true}
+            infinite={true}
+          >
+            <div className="flex items-center justify-center">
+              <img
+                className="h-16 w-auto max-w-[160px] object-contain"
+                src="public/credit_agrocole_log.png"
+              ></img>
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                className="h-16 w-auto max-w-[160px] object-contain"
+                src="public/esa_logo.png"
+              ></img>
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                className="h-16 w-auto max-w-[160px] object-contain"
+                src="public/credit_agrocole_log.png"
+              ></img>
+            </div>
+            <div className="flex items-center justify-center">
+              <img
+                className="h-16 w-auto max-w-[160px] object-contain"
+                src="public/esa_logo.png"
+              ></img>
+            </div>
+          </Carousel>
         </section>
 
         <section className="space-y-3">
