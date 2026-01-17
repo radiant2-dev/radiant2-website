@@ -109,25 +109,25 @@ function App() {
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-auto max-w-[160px] object-contain"
-                src="public/credit_agrocole_log.png"
+                src="/credit_agrocole_log.png"
               ></img>
             </div>
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-auto max-w-[160px] object-contain"
-                src="public/esa_logo.png"
+                src="/esa_logo.png"
               ></img>
             </div>
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-auto max-w-[160px] object-contain"
-                src="public/credit_agrocole_log.png"
+                src="/credit_agrocole_log.png"
               ></img>
             </div>
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-auto max-w-[160px] object-contain"
-                src="public/esa_logo.png"
+                src="/esa_logo.png"
               ></img>
             </div>
           </Carousel>
