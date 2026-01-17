@@ -23,7 +23,8 @@ const responsive = {
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-black text-slate-900">
+      <div className="bg-white">
       <header className="border-b border-slate-200">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
           <span className="text-lg font-semibold tracking-wide">
@@ -42,7 +43,7 @@ function App() {
             className="text-4xl font-mono"
             style={{ textShadow: "0 0 24px rgba(255, 255, 255, 0.45)" }}
           >
-          Supercharge you bussiness<br/>
+          Supercharge your company<br/>
           with AI {" "}
           <span className="inline-block align-baseline">
             <Typewriter
@@ -132,15 +133,13 @@ function App() {
           </Carousel>
         </section>
 
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold">Contact</h2>
-          <p className="text-sm text-slate-600">Contact information placeholder.</p>
-        </section>
       </main>
+      </div>
 
       <footer className="border-t border-slate-900 bg-black text-slate-100">
-        <div className="mx-auto flex h-16 max-w-5xl items-center px-6 text-sm">
-          Footer
+        <div className="mx-auto max-w-5xl space-y-3 px-6 py-10 text-sm">
+          <h2 className="text-xl font-semibold">Contact</h2>
+          <p className="text-sm text-slate-300">Contact information placeholder.</p>
         </div>
       </footer>
     </div>
