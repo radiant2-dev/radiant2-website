@@ -9,12 +9,14 @@ function App() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl space-y-12 px-6 py-12">
-        <section className="space-y-3">
-          <h2 className="text-3xl font-semibold">Hero</h2>
-          <p className="text-sm text-slate-400">Hero content placeholder.</p>
-        </section>
+      <section className="min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
+        <div className="mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-6xl font-semibold">Hero</h2>
+          <p className="text-sm">Hero content placeholder.</p>
+        </div>
+      </section>
 
+      <main className="mx-auto max-w-5xl space-y-12 px-6 py-12">
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold">Our Offer</h2>
           <p className="text-sm text-slate-400">Offer details placeholder.</p>
