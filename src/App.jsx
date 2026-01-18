@@ -29,7 +29,7 @@ function App() {
         >
           <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
             <span className="text-lg font-semibold tracking-wide">
-              Radial Vision
+              Radiant<sup>2</sup>
             </span>
             <a
               href="#contact"
@@ -44,7 +44,7 @@ function App() {
           <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
           <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
             <h2 className="text-5xl font-semibold sm:text-6xl">
-              Radial Vision
+              Radiant<sup>2</sup>
             </h2>
             <h3
               className="text-3xl font-mono"
