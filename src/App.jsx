@@ -68,14 +68,14 @@ function App() {
         <main className="mx-auto max-w-5xl space-y-12 px-6 py-12">
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold">Our offer</h2>
-            <p className="text-sm text-slate-600 font-semibold">We provide AI consulting for bussiness and industrial applications.
+            <p className="text-sm text-slate-600 font-semibold">We provide AI consulting for business and industrial applications.
             </p>
             <div className="grid gap-12 pt-2 text-sm text-slate-700 sm:grid-cols-3">
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   AI solutions
                 </h3>
-                <p className="text-sm text-slate-600">Intagrate AI into your bussines – process documents and analyze data with intelligent systems. Deploy secure AI-solutions using cloud providers or with secure on-premise setup.</p>
+                <p className="text-sm text-slate-600">Integrate AI into your business – process documents and analyze data with intelligent systems. Deploy secure AI-solutions using cloud providers or with secure on-premise setup.</p>
                 <p>
                 </p>
               </div>
@@ -83,7 +83,7 @@ function App() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Machine learning RnD
                 </h3>
-                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to any kind of bussiness.</p>
+                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to the most complex business domains.</p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
@@ -108,7 +108,7 @@ function App() {
                   Co-founder
                 </h2>
                 <p className="text-sm text-slate-600">
-                  {"AI R&D Lead with 7\+ years across financial and industrial sectors, delivering cutting-edge innovations - highlighted by AI solutions for Europe's #1 bank. He architects production-grade AI systems, agentic apps, and integrations driving business automation. A Google Cloud Summit Warsaw speaker, he leads specialized AI workshops for enterprises."}
+                  {"AI RnD Lead with 7\+ years across financial and industrial sectors, delivering cutting-edge innovations - highlighted by AI solutions for Europe's #1 bank. He architects production-grade AI systems, agentic apps, and integrations driving business automation. A Google Cloud Summit Warsaw speaker, he leads specialized AI workshops for enterprises."}
                 </p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4 max-w-96">
@@ -119,7 +119,7 @@ function App() {
                   Co-founder
                 </h2>
                 <p className="text-sm text-slate-600">
-                  {"AI R&D specialist with 5\+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Inuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems."}
+                  {"AI RnD specialist with 5\+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Inuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems."}
                 </p>
               </div>
             </div>
