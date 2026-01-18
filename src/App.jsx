@@ -43,11 +43,11 @@ function App() {
         <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
           <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
           <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
-            <h2 className="text-4xl font-semibold sm:text-6xl">
+            <h2 className="text-5xl font-semibold sm:text-6xl">
               Radial Vision
             </h2>
             <h3
-              className="text-2xl font-mono sm:text-4xl"
+              className="text-3xl font-mono sm:text-4xl"
               style={{ textShadow: "0 0 64px rgba(255, 255, 255, 0.6)" }}
             >
               Supercharge your company<br />
