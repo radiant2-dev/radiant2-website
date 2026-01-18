@@ -42,33 +42,62 @@ function App() {
 
         <main className="mx-auto max-w-5xl space-y-12 px-6 py-12">
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">Our Offer</h2>
-            <p className="text-sm text-slate-600">Offer details placeholder.</p>
-            <div className="grid gap-4 pt-2 text-sm text-slate-700 sm:grid-cols-3">
+            <h2 className="text-2xl font-semibold">Our offer</h2>
+            <p className="text-sm text-slate-600 font-semibold">We provide AI consulting for bussiness and industrial applications.
+            </p>
+            <div className="grid gap-12 pt-2 text-sm text-slate-700 sm:grid-cols-3">
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   AI solutions
                 </h3>
-                <p className="text-sm text-slate-600">Description placeholder.</p>
+                <p className="text-sm text-slate-600">Intagrate AI into your bussines – process documents and analyze data with intelligent systems. Deploy secure AI-solutions using cloud providers or with secure on-premise setup.</p>
+                <p>
+                </p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   Machine learning RnD
                 </h3>
-                <p className="text-sm text-slate-600">Description placeholder.</p>
+                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to any kind of bussiness</p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   AI training &amp; workshops
                 </h3>
-                <p className="text-sm text-slate-600">Description placeholder.</p>
+                <p className="text-sm text-slate-600">We provide workshops on cutting edge AI technologies. With us you can learn how to harness the newest AI systems hands-on beyond basic prompting</p>
               </div>
             </div>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold">Our Team</h2>
-            <p className="text-sm text-slate-600">Team profiles placeholder.</p>
+            <h3 className="pt-2 text-lg font-semibold text-slate-900">
+              Meet our founders
+            </h3>
+            <div className="grid gap-16 pt-2 text-sm text-slate-700 sm:grid-cols-2">
+              <div className="space-y-2 border-l-[3px] border-black pl-4 max-w-96">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Wojciech Ptasiński
+                </h3>
+                <h2 className="font-semibold text-slate-600">
+                  Co-founder
+                </h2>
+                <p className="text-sm text-slate-600">
+                  {"AI R&D Lead with 7\+ years across financial and industrial sectors, delivering cutting-edge innovations - highlighted by AI solutions for Europe's #1 bank. He architects production-grade AI systems, agentic apps, and integrations driving business automation. A Google Cloud Summit Warsaw speaker, he leads specialized AI workshops for enterprises."}
+                </p>
+              </div>
+              <div className="space-y-2 border-l-[3px] border-black pl-4 max-w-96">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Maciej Ziaja
+                </h3>
+                <h2 className="font-semibold text-slate-600">
+                  Co-founder
+                </h2>
+                <p className="text-sm text-slate-600">
+                  {"AI R&D specialist with 5\+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Inuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems."}
+                </p>
+              </div>
+            </div>
             <h3 className="pt-2 text-lg font-semibold text-slate-900">
               We have worked with
             </h3>
@@ -82,25 +111,31 @@ function App() {
               <div className="flex items-center justify-center">
                 <img
                   className="h-16 w-auto max-w-[160px] object-contain"
-                  src="/credit_agrocole_log.png"
-                ></img>
-              </div>
-              <div className="flex items-center justify-center">
-                <img
-                  className="h-16 w-auto max-w-[160px] object-contain"
                   src="/esa_logo.png"
                 ></img>
               </div>
               <div className="flex items-center justify-center">
                 <img
                   className="h-16 w-auto max-w-[160px] object-contain"
-                  src="/credit_agrocole_log.png"
+                  src="/vodeno_logo.png"
                 ></img>
               </div>
               <div className="flex items-center justify-center">
                 <img
                   className="h-16 w-auto max-w-[160px] object-contain"
-                  src="/esa_logo.png"
+                  src="/csa_logo.png"
+                ></img>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="h-16 w-auto max-w-[160px] object-contain"
+                  src="/unicredit_logo.png"
+                ></img>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="h-16 w-auto max-w-[160px] object-contain"
+                  src="/kplabs_logo.png"
                 ></img>
               </div>
             </Carousel>
