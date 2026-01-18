@@ -1,17 +1,42 @@
+import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Typewriter from 'typewriter-effect';
 import { carouselResponsive } from "./tailwindBreakpoints";
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-slate-900">
       <div className="bg-white">
-        <header className="border-b border-slate-200">
+        <header
+          className={`sticky top-0 z-50 border-b border-slate-200 transition ${
+            isScrolled
+              ? "bg-white/80 backdrop-blur-2xl"
+              : "bg-white"
+          }`}
+        >
           <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
             <span className="text-lg font-semibold tracking-wide">
               Radial Vision
             </span>
+            <a
+              href="#contact"
+              className="ml-auto px-4 py-1.5 text-sm font-normal text-slate-700 hover:text-slate-900"
+            >
+              Contact
+            </a>
           </div>
         </header>
 
@@ -144,7 +169,10 @@ function App() {
         </main>
       </div>
 
-      <footer className="border-t border-slate-900 bg-black text-slate-100">
+      <footer
+        id="contact"
+        className="border-t border-slate-900 bg-black text-slate-100"
+      >
         <div className="mx-auto max-w-5xl space-y-3 px-6 py-10 text-sm">
           <h2 className="text-xl font-semibold">Contact</h2>
           <p className="text-sm text-slate-300">Contact information placeholder.</p>
