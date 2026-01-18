@@ -47,7 +47,7 @@ function App() {
               Radial Vision
             </h2>
             <h3
-              className="text-3xl font-mono sm:text-4xl"
+              className="text-3xl font-mono"
               style={{ textShadow: "0 0 64px rgba(255, 255, 255, 0.6)" }}
             >
               Supercharge your company<br />
