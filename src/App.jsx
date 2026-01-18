@@ -83,13 +83,13 @@ function App() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Machine learning RnD
                 </h3>
-                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to any kind of bussiness</p>
+                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to any kind of bussiness.</p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   AI training &amp; workshops
                 </h3>
-                <p className="text-sm text-slate-600">We provide workshops on cutting edge AI technologies. With us you can learn how to harness the newest AI systems hands-on beyond basic prompting</p>
+                <p className="text-sm text-slate-600">We provide workshops on cutting edge AI technologies. With us you can learn how to harness the newest AI systems hands-on beyond basic prompting.</p>
               </div>
             </div>
           </section>
