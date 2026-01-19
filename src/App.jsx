@@ -83,7 +83,7 @@ function App() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Machine learning RnD
                 </h3>
-                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent solutions to the most complex business domains.</p>
+                <p className="text-sm text-slate-600">Your company needs ML-based solutions beyond general-purpose AI systems? We apply our RnD knowledge to develop intelligent systems for the most complex business domains.</p>
               </div>
               <div className="space-y-2 border-l-[3px] border-black pl-4">
                 <h3 className="text-lg font-semibold text-slate-900">
