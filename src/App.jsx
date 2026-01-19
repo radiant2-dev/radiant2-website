@@ -96,6 +96,7 @@ function App() {
 
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold">Our Team</h2>
+            <p className="text-sm text-slate-600  max-w-128">We are AI specialists with experience in business, industrial applications, and research. We work in places where AI meets real-world challenges to make measurable impact.</p>
             <h3 className="pt-2 text-lg font-semibold text-slate-900">
               Meet our founders
             </h3>
@@ -119,7 +120,7 @@ function App() {
                   Co-founder
                 </h2>
                 <p className="text-sm text-slate-600">
-                  {"AI RnD specialist with 5\+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Inuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems."}
+                  {"AI specialist with 5\+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Inuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems."}
                 </p>
               </div>
             </div>
@@ -175,7 +176,9 @@ function App() {
       >
         <div className="mx-auto max-w-5xl space-y-3 px-6 py-10 text-sm">
           <h2 className="text-xl font-semibold">Contact</h2>
-          <p className="text-sm text-slate-300">Contact information placeholder.</p>
+          <p className="text-sm text-slate-300 max-w-128">
+            Reach out to us at <a href="https://www.linkedin.com/in/wojciechptasinski/" className="underline">LinkedIn</a> to discuss how Radiant<sup>2</sup> can help your business leverage AI for automation and innovation.
+          </p>
         </div>
       </footer>
     </div>
