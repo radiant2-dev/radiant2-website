@@ -166,7 +166,7 @@ function OfferSection() {
             </p>
 
             <span className="font-semibold">What you'll learn:</span>
-            <ul className="text-slate-700 list-disc pl-5 space-y-1">
+            <ul className="text-slate-700 list-disc pl-5 space-y-2">
               <li>What AI, machine learning, and LLMs are (in plain language)</li>
               <li>Understanding the capabilities and limitations of AI</li>
               <li>Practical AI tools you can start using today</li>
@@ -195,7 +195,7 @@ function OfferSection() {
             </p>
 
             <span className="font-semibold">What you'll learn:</span>
-            <ul className="text-slate-700 list-disc pl-5 space-y-1">
+            <ul className="text-slate-700 list-disc pl-5 space-y-2">
               <li>Understand the landscape of open-source LLM models</li>
               <li>Learn how to set up LLM on-premise with Ollama</li>
               <li>Connect chat UI to your self-hosted LLM</li>
