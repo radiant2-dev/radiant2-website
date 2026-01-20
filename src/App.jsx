@@ -8,42 +8,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-export function CarouselDemo() {
-  const logos = [
-    { src: "/esa_logo.png", alt: "European Space Agency" },
-    { src: "/csa_logo.png", alt: "Canadian Space Agency" },
-    { src: "/kplabs_logo.png", alt: "KP Labs" },
-    { src: "/unicredit_logo.png", alt: "UniCredit" },
-    { src: "/vodeno_logo.png", alt: "Vodeno" },
-  ];
-
-  return (
-    <Carousel
-      opts={{ align: "start", loop: true }}
-      className="mt-4"
-      plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
-    >
-      <CarouselContent className="items-center">
-        {logos.map((logo) => (
-          <CarouselItem
-            key={logo.src}
-            className="basis-1/2 sm:basis-1/3 lg:basis-1/4"
-          >
-            <div className="flex h-16 items-center justify-center rounded-md bg-white">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-16 w-auto max-w-[160px] object-contain"
-                loading="lazy"
-              />
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-    </Carousel>
-  );
-}
-
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -59,9 +23,8 @@ function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-slate-200 transition ${
-        isScrolled ? "bg-white/80 backdrop-blur-2xl" : "bg-white"
-      }`}
+      className={`sticky top-0 z-50 border-b border-slate-200 transition ${isScrolled ? "bg-white/80 backdrop-blur-2xl" : "bg-white"
+        }`}
     >
       <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
         <span className="text-lg font-semibold tracking-wide">
@@ -197,8 +160,44 @@ function TeamSection() {
         In their individual professional careers, our team members have
         previously worked with:
       </p>
-      <CarouselDemo />
+      <LogosCarousel />
     </section>
+  );
+}
+
+function LogosCarousel() {
+  const logos = [
+    { src: "/esa_logo.png", alt: "European Space Agency" },
+    { src: "/csa_logo.png", alt: "Canadian Space Agency" },
+    { src: "/kplabs_logo.png", alt: "KP Labs" },
+    { src: "/unicredit_logo.png", alt: "UniCredit" },
+    { src: "/vodeno_logo.png", alt: "Vodeno" },
+  ];
+
+  return (
+    <Carousel
+      opts={{ align: "start", loop: true }}
+      className="mt-4"
+      plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
+    >
+      <CarouselContent className="items-center">
+        {logos.map((logo) => (
+          <CarouselItem
+            key={logo.src}
+            className="basis-1/2 sm:basis-1/3 lg:basis-1/4"
+          >
+            <div className="flex h-16 items-center justify-center rounded-md bg-white">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-16 w-auto max-w-[160px] object-contain"
+                loading="lazy"
+              />
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 }
 
