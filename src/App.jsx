@@ -154,7 +154,7 @@ function TeamSection() {
   return (
     <section className="space-y-3">
       <h2 className="text-2xl font-semibold">Our Team</h2>
-      <p className="text-sm text-slate-600  max-w-128">
+      <p className="text-sm text-slate-600  max-w-192">
         We are AI specialists with experience in business, industrial
         applications, and research. We work in places where AI meets real-world
         challenges to make measurable impact.
@@ -193,7 +193,7 @@ function TeamSection() {
       <h3 className="pt-2 text-lg font-semibold text-slate-900">
         Our experience
       </h3>
-      <p className="text-sm text-slate-600">
+      <p className="text-sm text-slate-600 max-w-192">
         In their individual professional careers, our team members have
         previously worked with:
       </p>
