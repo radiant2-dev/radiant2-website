@@ -245,7 +245,7 @@ function TeamSection() {
           <p className="text-sm text-slate-600">
             AI specialist with 5+ years of experience in RnD development and
             academic resaerch in frontier domains such as aerospace. Maciej has
-            built AI-based vision system onboard satellite mission Inuition-1.
+            built AI-based vision system onboard satellite mission Intuition-1.
             He's been active in publishing research papers and scientific
             conferences and is about to finish his PhD in AI for satellite
             systems.
