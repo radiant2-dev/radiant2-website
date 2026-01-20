@@ -17,6 +17,11 @@ import {
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navLinks = [
+    { href: "#offer", label: "Offer" },
+    { href: "#team", label: "Team" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,16 +39,24 @@ function Header() {
         isScrolled ? "bg-white/80 backdrop-blur-2xl" : "bg-white"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
+      <div className="mx-auto flex h-16 max-w-5xl items-center gap-6 px-6">
         <span className="text-lg font-semibold tracking-wide">
           Radiant<sup>2</sup>
         </span>
-        <a
-          href="#contact"
-          className="ml-auto px-4 py-1.5 text-sm font-normal text-slate-700 hover:text-slate-900"
+        <nav
+          className="ml-auto flex items-center gap-4 text-sm font-normal text-slate-700"
+          aria-label="Primary"
         >
-          Contact
-        </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="px-2 py-1.5 transition hover:text-slate-900"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </div>
     </header>
   );
@@ -51,7 +64,10 @@ function Header() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
+    <section
+      id="home"
+      className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20"
+    >
       <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
       <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
         <h2 className="text-5xl font-semibold sm:text-6xl">
@@ -81,7 +97,7 @@ function HeroSection() {
 
 function OfferSection() {
   return (
-    <section className="space-y-3">
+    <section id="offer" className="space-y-3">
       <h2 className="text-3xl font-semibold">Our offer</h2>
       <p className="text-sm text-slate-600 font-semibold">
         We provide AI consulting for business and industrial applications.
@@ -118,7 +134,10 @@ function OfferSection() {
         </div>
       </div>
 
-      <h3 className="pt-6 text-2xl font-semibold text-slate-900">
+      <h3
+        id="training"
+        className="pt-6 text-2xl font-semibold text-slate-900"
+      >
         Training and workshops
       </h3>
       <Accordion
@@ -196,7 +215,7 @@ function OfferSection() {
 
 function TeamSection() {
   return (
-    <section className="space-y-3">
+    <section id="team" className="space-y-3">
       <h2 className="text-3xl font-semibold">Our Team</h2>
       <p className="text-sm text-slate-600  max-w-192">
         We are AI specialists with experience in business, industrial
