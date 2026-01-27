@@ -1,10 +1,10 @@
 # Radiant2
 
-Radiant2 homepage.
+Radiant2 main homepage.
 
 ## Repository layout
 
-Project setup follows standard Vite project.
+Setup follows standard Vite project.
 
 Tech stack is: Vite, JavaScript, React, Tailwind, Shadcdn.
 
@@ -13,10 +13,12 @@ Tech stack is: Vite, JavaScript, React, Tailwind, Shadcdn.
 
 ## Setup
 
+Manage the project using standard `npm` commands:
+
 - Run dev: `npm run dev`
 - Run build: `npm run build`
-- Run linting: `npm run lint`
-- Format: `npm run format`
+- Run linting (via `eslint`): `npm run lint`
+- Format (via `prettier`): `npm run format`
 - Check formatting: `npm run format:check`
 
 ## Deployment
