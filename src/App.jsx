@@ -244,10 +244,6 @@ function TeamSection() {
           </p>
         </div>
       </div>
-      <p className="text-sm text-slate-600 max-w-192">
-        In their individual professional careers, our team members have
-        previously worked with:
-      </p>
     </section>
   );
 }
