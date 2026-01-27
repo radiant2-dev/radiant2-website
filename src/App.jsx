@@ -244,9 +244,6 @@ function TeamSection() {
           </p>
         </div>
       </div>
-      <h3 className="pt-2 text-lg font-semibold text-slate-900">
-        Our experience
-      </h3>
       <p className="text-sm text-slate-600 max-w-192">
         In their individual professional careers, our team members have
         previously worked with:
