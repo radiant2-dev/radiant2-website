@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
+import { useEffect, useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navLinks = [
-    { href: "#offer", label: "Offer" },
-    { href: "#team", label: "Team" },
-    { href: "#contact", label: "Contact" },
+    { href: '#offer', label: 'Offer' },
+    { href: '#team', label: 'Team' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   useEffect(() => {
@@ -22,14 +22,15 @@ function Header() {
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-slate-200 transition ${isScrolled ? "bg-white/80 backdrop-blur-2xl" : "bg-white"
-        }`}
+      className={`sticky top-0 z-50 border-b border-slate-200 transition ${
+        isScrolled ? 'bg-white/80 backdrop-blur-2xl' : 'bg-white'
+      }`}
     >
       <div className="mx-auto flex h-16 max-w-5xl items-center gap-6 px-6">
         <span className="text-lg font-semibold tracking-wide">
@@ -39,7 +40,7 @@ function Header() {
           className="ml-auto flex items-center gap-4 text-sm font-normal text-slate-700"
           aria-label="Primary"
         >
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <a
               key={link.href}
               href={link.href}
@@ -67,16 +68,12 @@ function HeroSection() {
         </h2>
         <h3
           className="text-3xl font-mono"
-          style={{ textShadow: "0 0 64px rgba(255, 255, 255, 0.6)" }}
+          style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
         >
-          Supercharge your company with AI{" "}
+          Supercharge your company with AI{' '}
           <Typewriter
             options={{
-              strings: [
-                "for bussiness automation",
-                "for industrial processes",
-                "workshops",
-              ],
+              strings: ['for bussiness automation', 'for industrial processes', 'workshops'],
               autoStart: true,
               loop: true,
             }}
@@ -98,45 +95,32 @@ function OfferSection() {
         <div className="space-y-2 border-l-[3px] border-black pl-4">
           <h3 className="text-lg font-semibold text-slate-900">AI solutions</h3>
           <p className="text-sm text-slate-600">
-            Integrate AI into your business – process documents and analyze data
-            with intelligent systems. Deploy secure AI-solutions using cloud
-            providers or with secure on-premise setup.
+            Integrate AI into your business – process documents and analyze data with intelligent
+            systems. Deploy secure AI-solutions using cloud providers or with secure on-premise
+            setup.
           </p>
           <p></p>
         </div>
         <div className="space-y-2 border-l-[3px] border-black pl-4">
-          <h3 className="text-lg font-semibold text-slate-900">
-            Machine learning RnD
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900">Machine learning RnD</h3>
           <p className="text-sm text-slate-600">
-            Your company needs ML-based solutions beyond general-purpose AI
-            systems? We apply our RnD knowledge to develop intelligent systems
-            for the most complex business domains.
+            Your company needs ML-based solutions beyond general-purpose AI systems? We apply our
+            RnD knowledge to develop intelligent systems for the most complex business domains.
           </p>
         </div>
         <div className="space-y-2 border-l-[3px] border-black pl-4">
-          <h3 className="text-lg font-semibold text-slate-900">
-            AI training &amp; workshops
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900">AI training &amp; workshops</h3>
           <p className="text-sm text-slate-600">
-            We provide workshops on cutting edge AI technologies. With us you
-            can learn how to harness the newest AI systems hands-on beyond basic
-            prompting.
+            We provide workshops on cutting edge AI technologies. With us you can learn how to
+            harness the newest AI systems hands-on beyond basic prompting.
           </p>
         </div>
       </div>
 
-      <h3
-        id="training"
-        className="pt-6 text-2xl font-semibold text-slate-900"
-      >
+      <h3 id="training" className="pt-6 text-2xl font-semibold text-slate-900">
         Training and workshops
       </h3>
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full"
-      >
+      <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger>
             <div className="flex flex-col gap-1">
@@ -144,17 +128,15 @@ function OfferSection() {
                 AI fundamentals – introduction
               </span>
               <span className="text-xs font-normal text-slate-600">
-                A basic introduction to AI for everyone. Understand what AI can
-                and cannot do, learn practical applications, and work with real
-                tools.
+                A basic introduction to AI for everyone. Understand what AI can and cannot do, learn
+                practical applications, and work with real tools.
               </span>
             </div>
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
             <span className="font-semibold">Who is this for?</span>
             <p className="text-slate-700">
-              Anyone who wants to understand AI • Teams new to AI • Mixed
-              technical backgrounds
+              Anyone who wants to understand AI • Teams new to AI • Mixed technical backgrounds
             </p>
 
             <span className="font-semibold">What you'll learn:</span>
@@ -182,9 +164,7 @@ function OfferSection() {
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
             <span className="font-semibold">Who is this for?</span>
-            <p className="text-slate-700">
-              Software devlopers • DevOps • IT Administrators
-            </p>
+            <p className="text-slate-700">Software devlopers • DevOps • IT Administrators</p>
 
             <span className="font-semibold">What you'll learn:</span>
             <ul className="text-slate-700 list-disc pl-5 space-y-2">
@@ -192,10 +172,7 @@ function OfferSection() {
               <li>Learn how to set up LLM on-premise with Ollama</li>
               <li>Connect chat UI to your self-hosted LLM</li>
               <li>Use self-hosted AI in agentic mode</li>
-              <li>
-                Build workflows and automation with local AI-powered building
-                blocks
-              </li>
+              <li>Build workflows and automation with local AI-powered building blocks</li>
             </ul>
           </AccordionContent>
         </AccordionItem>
@@ -209,25 +186,19 @@ function TeamSection() {
     <section id="team" className="space-y-3">
       <h2 className="text-3xl font-semibold">Our Team</h2>
       <p className="text-sm text-slate-600  max-w-192">
-        We are AI specialists with experience in business, industrial
-        applications, and research. We work in places where AI meets real-world
-        challenges to make measurable impact.
+        We are AI specialists with experience in business, industrial applications, and research. We
+        work in places where AI meets real-world challenges to make measurable impact.
       </p>
-      <h3 className="pt-2 text-xl font-semibold text-slate-900">
-        Meet our founders
-      </h3>
+      <h3 className="pt-2 text-xl font-semibold text-slate-900">Meet our founders</h3>
       <div className="grid gap-16 pt-2 text-sm text-slate-700 sm:grid-cols-2">
         <div className="space-y-2 border-l-[3px] border-black pl-4 max-w-96">
-          <h3 className="text-lg font-semibold text-slate-900">
-            Wojciech Ptasiński
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900">Wojciech Ptasiński</h3>
           <h2 className="font-semibold text-slate-600">Co-founder</h2>
           <p className="text-sm text-slate-600">
-            AI RnD Lead with 7+ years across financial and industrial sectors,
-            delivering cutting-edge innovations - highlighted by AI solutions
-            for Europe's #1 bank. He architects production-grade AI systems,
-            agentic apps, and integrations driving business automation. A Google
-            Cloud Summit Warsaw speaker, he leads specialized AI workshops for
+            AI RnD Lead with 7+ years across financial and industrial sectors, delivering
+            cutting-edge innovations - highlighted by AI solutions for Europe's #1 bank. He
+            architects production-grade AI systems, agentic apps, and integrations driving business
+            automation. A Google Cloud Summit Warsaw speaker, he leads specialized AI workshops for
             enterprises.
           </p>
         </div>
@@ -235,12 +206,10 @@ function TeamSection() {
           <h3 className="text-lg font-semibold text-slate-900">Maciej Ziaja</h3>
           <h2 className="font-semibold text-slate-600">Co-founder</h2>
           <p className="text-sm text-slate-600">
-            AI specialist with 5+ years of experience in RnD development and
-            academic resaerch in frontier domains such as aerospace. Maciej has
-            built AI-based vision system onboard satellite mission Intuition-1.
-            He's been active in publishing research papers and scientific
-            conferences and is about to finish his PhD in AI for satellite
-            systems.
+            AI specialist with 5+ years of experience in RnD development and academic resaerch in
+            frontier domains such as aerospace. Maciej has built AI-based vision system onboard
+            satellite mission Intuition-1. He's been active in publishing research papers and
+            scientific conferences and is about to finish his PhD in AI for satellite systems.
           </p>
         </div>
       </div>
@@ -248,25 +217,18 @@ function TeamSection() {
   );
 }
 
-
 function Footer() {
   return (
-    <footer
-      id="contact"
-      className="border-t border-slate-900 bg-black text-slate-100"
-    >
+    <footer id="contact" className="border-t border-slate-900 bg-black text-slate-100">
       <div className="mx-auto max-w-5xl space-y-3 px-6 py-10 text-sm">
         <h2 className="text-xl font-semibold">Contact</h2>
         <p className="text-sm text-slate-300 max-w-128">
-          Reach out to us at{" "}
-          <a
-            href="https://www.linkedin.com/in/wojciechptasinski/"
-            className="underline"
-          >
+          Reach out to us at{' '}
+          <a href="https://www.linkedin.com/in/wojciechptasinski/" className="underline">
             LinkedIn
-          </a>{" "}
-          to discuss how Radiant<sup>2</sup> can help your business leverage AI
-          for automation and innovation.
+          </a>{' '}
+          to discuss how Radiant<sup>2</sup> can help your business leverage AI for automation and
+          innovation.
         </p>
       </div>
     </footer>

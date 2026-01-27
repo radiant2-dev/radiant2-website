@@ -1,4 +1,4 @@
-# Radiant2 
+# Radiant2
 
 Radiant2 homepage.
 
@@ -8,14 +8,16 @@ Project setup follows standard Vite project.
 
 Tech stack is: Vite, JavaScript, React, Tailwind, Shadcdn.
 
-* Main app and pages are in `src`
-* Static assets are in `public`
+- Main app and pages are in `src`
+- Static assets are in `public`
 
 ## Setup
 
-* Run dev: `npm run dev`
-* Run build: `npm run build`
-* Run linting: `npm run lint`
+- Run dev: `npm run dev`
+- Run build: `npm run build`
+- Run linting: `npm run lint`
+- Format: `npm run format`
+- Check formatting: `npm run format:check`
 
 ## Deployment
 
