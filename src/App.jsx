@@ -227,7 +227,11 @@ function Footer({ content }) {
           <a href="https://www.linkedin.com/in/wojciechptasinski/" className="underline">
             LinkedIn
           </a>{' '}
-          {content.footer.textAfterLink}
+          {content.footer.textAfterLink}{' '}
+          <a href="mailto:radiant2.dev@gmail.com" className="underline">
+            radiant2.dev@gmail.com
+          </a>{' '}
+          {content.footer.textAfterEmail}
         </p>
       </div>
     </footer>

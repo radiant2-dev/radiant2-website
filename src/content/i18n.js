@@ -83,7 +83,8 @@ const translations = {
     footer: {
       title: 'Contact',
       text: 'Reach out to us at',
-      textAfterLink:
+      textAfterLink: 'or email us at',
+      textAfterEmail:
         'to discuss how Radiant\u00b2 can help your business leverage AI for automation and innovation.',
     },
   },
@@ -171,7 +172,8 @@ const translations = {
     footer: {
       title: 'Kontakt',
       text: 'Skontaktuj się z nami przez',
-      textAfterLink:
+      textAfterLink: 'lub napisz do nas na',
+      textAfterEmail:
         'i porozmawiajmy o tym, jak Radiant\u00b2 może pomóc Twojemu biznesowi wykorzystać AI do automatyzacji i innowacji.',
     },
   },
