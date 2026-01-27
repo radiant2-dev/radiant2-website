@@ -28,4 +28,5 @@ Manage the project using standard `npm` commands:
 The deployment is done via GitHub pages using the `deploy` GitHub Action. The
 GitHub provided URL is: https://radiant2-dev.github.io/radiant2-website.
 
-DNS setup for radiant2.dev domain is done using Cloudflare.
+DNS setup for radiant2.dev domain is done using Cloudflare. Remeber keep
+Cloudflare Proxy off to enable GitHub pages-based TLS and https enforcement.
