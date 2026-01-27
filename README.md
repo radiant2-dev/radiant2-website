@@ -1,5 +1,7 @@
 # Radiant2
 
+[![CI](https://github.com/radiant2-dev/radiant2-website/actions/workflows/ci.yaml/badge.svg)](https://github.com/radiant2-dev/radiant2-website/actions/workflows/ci.yaml)
+
 Radiant2 main homepage.
 
 ## Repository layout
