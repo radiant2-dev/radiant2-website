@@ -28,7 +28,7 @@
 
 - Keep simple minimalist design
 - Prefer flat design and styling, avoid depth and shadows, unless explicitly
-asked
+  asked
 
 ## Notes for agents
 
