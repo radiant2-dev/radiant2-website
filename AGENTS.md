@@ -24,6 +24,12 @@
 - Don't use Typescript, this is a pure JS website
 - Run Prettier via `npm run format` before handing off changes.
 
+## Design
+
+- Keep simple minimalist design
+- Prefer flat design and styling, avoid depth and shadows, unless explicitly
+asked
+
 ## Notes for agents
 
 - Only edit files in this repo; avoid touching `node_modules`.
