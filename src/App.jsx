@@ -33,27 +33,29 @@ function Header({ content, language, onLanguageChange }) {
         isScrolled ? 'bg-white/80 backdrop-blur-2xl' : 'bg-white'
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-5xl items-center gap-6 px-6">
-        <span className="text-lg font-semibold tracking-wide">
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:h-16 sm:flex-nowrap sm:gap-6 sm:px-6 sm:py-0">
+        <span className="flex-shrink-0 text-lg font-semibold tracking-wide">
           Radiant<sup>2</sup>
         </span>
         <nav
-          className="ml-auto flex items-center gap-4 text-sm font-normal text-slate-700"
+          className="order-3 flex w-full flex-wrap items-center gap-2 text-sm font-normal text-slate-700 sm:order-none sm:ml-auto sm:w-auto sm:flex-nowrap sm:gap-4"
           aria-label="Primary"
         >
-          {navLinks.map(link => (
+          {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
-              className="px-2 py-1.5 transition hover:text-slate-900"
+              className={`px-2 py-1 text-xs transition hover:text-slate-900 sm:py-1.5 sm:text-sm ${
+                index === 0 ? 'pl-0 sm:pl-2' : ''
+              }`}
             >
               {link.label}
             </a>
           ))}
         </nav>
-        <span className="h-5 w-[1.5px] bg-slate-500" aria-hidden="true" />
+        <span className="hidden h-5 w-[1.5px] bg-slate-500 sm:block" aria-hidden="true" />
         <div
-          className="flex items-center gap-1 text-xs font-semibold text-slate-700"
+          className="order-2 ml-auto flex items-center gap-1 text-xs font-semibold text-slate-700 sm:order-none sm:ml-0"
           role="group"
           aria-label={content.labels.language}
         >
