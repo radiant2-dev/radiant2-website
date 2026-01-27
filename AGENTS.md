@@ -1,7 +1,7 @@
 # AGENTS
 
 ## Project snapshot
-- Stack: Vite + React (JS/TS), Tailwind CSS v4, Radix UI, Lucide icons.
+- Stack: Vite, JavaScript, React, Tailwind, Shadcn
 - Entry: `index.html` -> `src/main.jsx` (standard Vite).
 
 ## Quick commands
@@ -15,6 +15,8 @@
 - Prefer Tailwind utility classes; avoid new global CSS unless necessary.
 - When adding UI, follow existing design language in `src/`.
 - Static assets live in `public/` (served as-is) and can be imported from `src/` when bundled.
+- Use Shadcn components if possible, don't reinvent the wheel
+- Don't use Typescript, this is pure JS website
 
 ## Notes for agents
 - Only edit files in this repo; avoid touching `node_modules`.
