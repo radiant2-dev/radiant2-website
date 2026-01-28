@@ -211,6 +211,166 @@ const translations = {
         },
       ],
     },
+    projects: {
+      hero: {
+        title: 'Custom AI built for your business',
+        subtitle: 'End-to-end AI development. From proof of concept to production-ready systems.',
+        cta: 'Discuss your project',
+      },
+      whatWeBuild: {
+        title: 'What we build',
+        items: [
+          { title: 'AI Agents', description: 'autonomous task handling' },
+          { title: 'Document Processing', description: 'data extraction, analysis, summaries' },
+          { title: 'Knowledge Bases', description: 'chatbots trained on your data' },
+          { title: 'Process Automation', description: 'LLM-powered workflows' },
+          { title: 'Integrations', description: 'connecting your tools with AI' },
+          { title: 'Something else?', description: "Let's talk" },
+        ],
+      },
+      howWeWork: {
+        title: 'How we work',
+        steps: [
+          {
+            title: 'Discovery',
+            description: 'We define the real problem. You get a concrete proposal.',
+          },
+          {
+            title: 'Build',
+            description: 'Iterative development. Weekly demos. No surprises.',
+          },
+          {
+            title: 'Deployment',
+            description: 'On your infrastructure. Tested. It works.',
+          },
+          {
+            title: 'Handoff',
+            description: 'Documentation. Training. Everything is yours.',
+          },
+        ],
+      },
+      whatWeDont: {
+        title: "What we don't do",
+        items: [
+          "Demos that don't scale",
+          'Slides without implementation',
+          "Black boxes you can't maintain",
+          "Projects where AI doesn't make sense",
+        ],
+      },
+      industries: {
+        text: 'We have deployed AI in banking, aerospace, and manufacturing - where there is no room for error.',
+      },
+      cta: {
+        title: 'Have a project in mind?',
+        button: 'Book a call',
+        footer: 'Or email: radiant2.dev@gmail.com',
+      },
+    },
+    workshops: {
+      hero: {
+        title: 'AI training that actually sticks',
+        subtitle: 'Hands-on workshops for technical and non-technical teams',
+        cta: 'Book a call',
+      },
+      whoItsFor: {
+        title: "Who it's for",
+        items: [
+          { title: 'Technical Teams', description: 'Build with LLMs, agents, RAG systems' },
+          { title: 'Executives', description: 'Evaluate AI opportunities and risks' },
+          { title: 'Mixed Teams', description: 'Cross-functional AI adoption' },
+          { title: 'HR / L&D', description: 'Upskilling programs at scale' },
+        ],
+      },
+      modules: {
+        title: 'Choose your modules',
+        subtitle:
+          "We build your workshop from proven modules. Pick what matters. Skip what doesn't.",
+        items: [
+          {
+            title: 'Foundations',
+            content: [
+              "AI landscape: what's real vs. hype",
+              'LLMs, agents, embeddings explained',
+              'Prompt engineering fundamentals',
+            ],
+            tag: 'Best for: All levels',
+          },
+          {
+            title: 'Prompt Engineering',
+            content: [
+              'Advanced prompting techniques',
+              'Chain-of-thought, few-shot learning',
+              'AI workflows',
+              'Hands-on with real use cases',
+            ],
+            tag: 'Best for: All levels',
+          },
+          {
+            title: 'Building Agents',
+            content: [
+              'Agent architectures',
+              'Tools and function calling',
+              'Building your first agent',
+            ],
+            tag: 'Best for: Developers',
+          },
+          {
+            title: 'RAG Systems',
+            content: [
+              'Retrieval-augmented generation',
+              'Vector databases and embeddings',
+              'Building a knowledge base',
+            ],
+            tag: 'Best for: Developers, data teams',
+          },
+          {
+            title: 'AI in Your Workflow',
+            content: [
+              'Identifying automation opportunities',
+              'API integrations',
+              'Your use cases, workshopped live',
+            ],
+            tag: 'Best for: Teams with specific goals',
+          },
+          {
+            title: 'Custom Module',
+            content: ['Something specific?', "We'll design it together."],
+            tag: null,
+          },
+        ],
+      },
+      formats: {
+        title: 'Formats',
+        items: [
+          {
+            title: 'Half-day',
+            duration: '4 hours',
+            description: '2-3 modules. First exposure or focused skill-building.',
+          },
+          {
+            title: 'Full-day',
+            duration: '8 hours',
+            description: 'Deep training with hands-on work.',
+          },
+          {
+            title: 'Multi-day',
+            duration: 'Custom',
+            description: 'Full curriculum. Organization-wide programs.',
+          },
+        ],
+      },
+      whyUs: {
+        title: 'Why us',
+        stats: ['500+ trained', 'Practitioners, not theorists', 'Real projects, not demos'],
+      },
+      cta: {
+        title: 'Ready to train your team?',
+        subtitle:
+          "Book a call to discuss your training needs. We'll design the right program for you.",
+        button: 'Book a call',
+      },
+    },
     footer: {
       email: 'radiant2.dev@gmail.com',
       copyright: '© 2025 Radiant2',
@@ -234,69 +394,69 @@ const translations = {
       cta: 'Umów bezpłatną konsultację',
     },
     problem: {
-      title: 'Brzmi znajomo?',
+      title: 'Znasz to?',
       painPoints: [
-        'Twój zespół wypróbował ChatGPT... i co dalej?',
-        'Wiesz, że AI jest ważne, ale nie wiesz od czego zacząć',
-        'Rozmawiałeś z konsultantami, którzy mówią tylko buzzwordami',
-        'Martwisz się o prywatność danych przy chmurowych narzędziach AI',
-        'Potrzebujesz ekspertyzy AI, ale nie możesz uzasadnić pełnoetatowego zatrudnienia',
+        'Twój zespół przetestował ChatGPT... i co teraz?',
+        'Wiesz, że AI ma znaczenie, ale nie wiesz, od czego zacząć',
+        'Rozmawiałeś z konsultantami, którzy rzucają tylko "buzzwordami"',
+        'Obawiasz się o bezpieczeństwo danych w chmurowych narzędziach AI',
+        'Potrzebujesz kompetencji AI, ale etat się nie spina',
       ],
-      transition: 'Słyszymy to co tydzień od CTO i liderów innowacji. Tak możemy pomóc.',
+      transition: 'Słyszymy to co tydzień od różnych firm. Oto, jak pomagamy.',
     },
     services: {
-      title: 'Nasze usługi',
+      title: 'Usługi',
       items: [
         {
           title: 'Warsztaty i szkolenia AI',
           description:
-            'Praktyczne szkolenia dla zespołów technicznych i nietechnicznych. Od pierwszego prompta do umiejętności produkcyjnych.',
-          link: 'Dowiedz się więcej →',
+            'Praktyczne szkolenia dla zespołów technicznych i biznesowych. Od pierwszego prompta do gotowości produkcyjnej.',
+          link: 'Więcej',
         },
         {
-          title: 'Automatyzacje i agenty AI',
+          title: 'Automatyzacje i agenci AI',
           description:
-            'Niestandardowe systemy AI, które działają. Agenty, workflow, integracje budowane dla Twojego biznesu.',
-          link: 'Dowiedz się więcej →',
+            'Dedykowane systemy AI, które działają. Agenci, automatyzacje, integracje szyte pod Twój biznes.',
+          link: 'Więcej',
         },
         {
-          title: 'Infrastruktura AI on-premise',
+          title: 'AI na Twojej infrastrukturze',
           description:
-            'Lokalne LLM-y, systemy RAG, prywatna infrastruktura. Twoje dane nigdy nie opuszczają serwerów.',
-          link: 'Dowiedz się więcej →',
+            'Lokalne modele, systemy RAG, prywatna infrastruktura. Twoje dane nie wychodzą z Twoich serwerów.',
+          link: 'Więcej',
         },
       ],
     },
     positioning: {
-      title: 'Mamy to już za sobą.',
-      body: 'Szkoliliśmy zespoły, budowaliśmy produkcyjne systemy AI i wdrażaliśmy prywatną infrastrukturę - w branżach, gdzie porażka nie wchodzi w grę.',
+      title: 'Mamy to przećwiczone.',
+      body: 'Szkoliliśmy zespoły, budowaliśmy produkcyjne systemy AI i wdrażaliśmy prywatną infrastrukturę — w branżach, gdzie nie ma miejsca na błędy.',
       stats: [
         {
           number: '500+',
-          label: 'przeszkolonych osób',
-          subtext: 'Od kadry zarządzającej po deweloperów',
+          label: 'PRZESZKOLONYCH',
+          subtext: 'Od zarządu po programistów',
         },
         {
-          number: 'Produkcyjne AI',
-          label: 'w regulowanych branżach',
+          number: 'AI produkcyjne',
+          label: 'W REGULOWANYCH BRANŻACH',
           subtext: 'Bankowość, aerospace, przemysł',
         },
         {
-          number: 'Systemy on-prem',
-          label: 'wdrożone',
-          subtext: 'Dla organizacji dbających o dane',
+          number: 'Wdrożone',
+          label: 'SYSTEMY LOKALNE',
+          subtext: 'Dla firm z wrażliwymi danymi',
         },
       ],
     },
     proof: {
-      title: 'Widziani na dużych scenach',
+      title: 'Występowaliśmy na dużych scenach',
       events: [
         {
           image: '/gcsummit.png',
           event: 'GOOGLE CLOUD SUMMIT WARSAW 2024',
           venue: 'Stadion Narodowy',
           talkTitle: 'AI-Powered Smart Contracts in Next-Gen Banking',
-          cta: 'Zobacz wydarzenie →',
+          cta: 'Zobacz, jak było na wydarzenie',
           videoUrl: 'https://youtu.be/HZf2PursXBY?si=BHiau_31EFYc_KIE',
         },
         {
@@ -308,47 +468,46 @@ const translations = {
       ],
     },
     process: {
-      title: 'Jak to działa',
+      title: 'Jak działamy',
       steps: [
         {
           number: '1',
-          title: 'Bezpłatna konsultacja',
-          description: '30 minut. Ty mówisz, my słuchamy. Bez prezentacji, bez presji.',
+          title: 'Bezpłatna rozmowa',
+          description: '30 minut. Ty mówisz, my słuchamy. Bez pitchowania, bez presji.',
         },
         {
           number: '2',
-          title: 'Jasna propozycja',
-          description: 'Zakres, timeline, cena. Bez niespodzianek. Wiesz dokładnie co dostajesz.',
+          title: 'Konkretna oferta',
+          description: 'Zakres, terminy, cena. Bez niespodzianek. Wiesz dokładnie, co dostajesz.',
         },
         {
           number: '3',
-          title: 'Dostarczamy',
+          title: 'Realizujemy',
           description:
-            "Warsztaty, systemy, infrastruktura - z regularnymi update'ami i działającymi wynikami.",
+            'Warsztaty, systemy, infrastruktura — z regularnymi aktualizacjami i działającymi wynikami.',
         },
         {
           number: '4',
-          title: 'Ty się rozwijasz',
-          description:
-            'Budujemy kompetencje, nie zależność. Nasz cel: nie potrzebujesz nas na zawsze.',
+          title: 'Rozwijasz się',
+          description: 'Budujemy Twoje kompetencje, nie zależność.',
         },
       ],
     },
     contact: {
-      title: 'Gotowy żeby zacząć?',
+      title: 'Gotowy do startu?',
       subtitle:
-        'Nie wiesz od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
-      primaryCta: 'Umów bezpłatną rozmowę (30 min)',
+        'Nie wiesz, od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
+      primaryCta: 'Umów pierwszą rozmowę (30 min)',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Wolisz napisać?',
       form: {
-        name: 'Imię i nazwisko',
+        name: 'Imię',
         email: 'Email',
         company: 'Firma',
-        message: 'W czym możemy pomóc?',
-        submit: 'Wyślij wiadomość',
+        message: 'Czego potrzebujesz?',
+        submit: 'Wyślij',
       },
-      email: 'Lub bezpośrednio na email: radiant2.dev@gmail.com',
+      email: 'Lub mailowo: radiant2.dev@gmail.com',
     },
     offer: {
       title: 'Nasza oferta',
@@ -406,14 +565,14 @@ const translations = {
       },
     },
     team: {
-      title: 'Kim jesteśmy',
+      title: 'Zespół',
       closing:
-        'Założyliśmy Radiant2, bo widzieliśmy zbyt wiele firm spalonych przez AI hype. Bierzemy tylko projekty, które możemy zrealizować.',
+        'Założyliśmy Radiant2, bo widzieliśmy zbyt wiele firm, które przepaliły budżet na AI bez efektów. Bierzemy tylko projekty, które jesteśmy w stanie dowieźć.',
       founders: [
         {
           name: 'Wojciech Ptasiński',
           role: 'Współzałożyciel',
-          bio: 'R&D Manager z 7+ latami wdrażania AI w bankowości i systemach satelitarnych. Prelegent Google Cloud Summit. Publikujący badacz w dziedzinie AI i automatyki przemysłowej.',
+          bio: 'R&D Manager z ponad 7-letnim doświadczeniem w AI dla bankowości i systemów satelitarnych. Prelegent Google Cloud Summit. Autor publikacji naukowych z AI i automatyki przemysłowej.',
           links: {
             linkedin: 'https://www.linkedin.com/in/wojciechptasinski/',
             website: 'https://wptasinski.com',
@@ -422,12 +581,178 @@ const translations = {
         {
           name: 'Maciej Ziaja',
           role: 'Współzałożyciel',
-          bio: 'Doktorant z zakresu AI dla systemów satelitarnych. Zbudował systemy wizji AI dla misji satelitarnej Intuition-1. Publikujący badacz w dziedzinie aerospace i computer vision.',
+          bio: 'Doktorant — AI dla systemów satelitarnych. Twórca systemów wizyjnych AI dla misji Intuition-1. Autor publikacji z zakresu kosmonautyki i widzenia komputerowego.',
           links: {
             linkedin: '#',
           },
         },
       ],
+    },
+    projects: {
+      hero: {
+        title: 'AI szyte pod Twój biznes',
+        subtitle: 'Od pomysłu do produkcji. Kompleksowe rozwiązania AI.',
+        cta: 'Porozmawiajmy',
+      },
+      whatWeBuild: {
+        title: 'Co budujemy',
+        items: [
+          { title: 'Agenci AI', description: 'autonomiczna obsługa zadań' },
+          {
+            title: 'Przetwarzanie dokumentów',
+            description: 'wyciąganie danych, analiza, streszczenia',
+          },
+          { title: 'Bazy wiedzy', description: 'chatboty trenowane na Twoich danych' },
+          { title: 'Automatyzacja procesów', description: 'procesy wspierane przez LLM' },
+          { title: 'Integracje', description: 'łączymy Twoje narzędzia z AI' },
+          { title: 'Coś innego?', description: 'Porozmawiajmy' },
+        ],
+      },
+      howWeWork: {
+        title: 'Jak pracujemy',
+        steps: [
+          {
+            title: 'Rozpoznanie',
+            description: 'Definiujemy prawdziwy problem. Dostajesz konkretną ofertę.',
+          },
+          {
+            title: 'Budowa',
+            description: 'Iteracyjny rozwój. Co tydzień demo. Bez niespodzianek.',
+          },
+          {
+            title: 'Wdrożenie',
+            description: 'Na Twojej infrastrukturze. Przetestowane. Działa.',
+          },
+          {
+            title: 'Przekazanie',
+            description: 'Dokumentacja. Szkolenie. Wszystko Twoje.',
+          },
+        ],
+      },
+      whatWeDont: {
+        title: 'Czego nie robimy',
+        items: [
+          'Dema, które nie skalują',
+          'Slajdów bez wdrożenia',
+          'Czarnych skrzynek, których nie utrzymasz',
+          'Projektów, gdzie AI nie ma sensu',
+        ],
+      },
+      industries: {
+        text: 'Wdrażaliśmy AI w bankowości, aerospace i przemyśle — tam, gdzie nie ma miejsca na błędy.',
+      },
+      cta: {
+        title: 'Masz pomysł na projekt?',
+        button: 'Umów rozmowę',
+        footer: 'Lub mailowo: radiant2.dev@gmail.com',
+      },
+    },
+    workshops: {
+      hero: {
+        title: 'Warsztaty AI, które naprawdę zostają',
+        subtitle: 'Praktyczne szkolenia dla zespołów technicznych i nietechnicznych',
+        cta: 'Umów rozmowę',
+      },
+      whoItsFor: {
+        title: 'Dla kogo',
+        items: [
+          {
+            title: 'Zespoły techniczne',
+            description: 'Naucz się budować z LLM-ami, agentami i RAG',
+          },
+          { title: 'Zarząd i menadżerowie', description: 'Oceń szanse i ryzyka związane z AI' },
+          { title: 'Zespoły mieszane', description: 'Wdrożenie AI w całej organizacji' },
+          { title: 'HR / Rozwój', description: 'Programy rozwoju kompetencji' },
+        ],
+      },
+      modules: {
+        title: 'Wybierz moduły',
+        subtitle:
+          'Składamy warsztat ze sprawdzonych modułów. Wybierasz, co istotne. Resztę pomijamy.',
+        items: [
+          {
+            title: 'Podstawy',
+            content: [
+              'Rynek AI: co działa, a co to hype',
+              'LLM-y, agenci, embeddingi — prosto wyjaśnione',
+              'Podstawy prompt engineeringu',
+            ],
+            tag: 'Dla: Każdego poziomu',
+          },
+          {
+            title: 'Prompt Engineering',
+            content: [
+              'Zaawansowane techniki promptowania',
+              'Chain-of-thought, few-shot learning',
+              'Przepływy pracy z AI',
+              'Praktyka na prawdziwych przypadkach',
+            ],
+            tag: 'Dla: Każdego poziomu',
+          },
+          {
+            title: 'Budowanie agentów',
+            content: [
+              'Architektury agentów',
+              'Narzędzia i function calling',
+              'Budowa pierwszego agenta',
+            ],
+            tag: 'Dla: Programistów',
+          },
+          {
+            title: 'Systemy RAG',
+            content: [
+              'Retrieval-Augmented Generation',
+              'Bazy wektorowe i embeddingi',
+              'Budowa bazy wiedzy',
+            ],
+            tag: 'Dla: Programistów, zespołów data',
+          },
+          {
+            title: 'AI w Twojej pracy',
+            content: [
+              'Gdzie warto automatyzować',
+              'Integracje przez API',
+              'Twoje przypadki — rozwiązane na żywo',
+            ],
+            tag: 'Dla: Zespołów z konkretnymi celami',
+          },
+          {
+            title: 'Moduł na zamówienie',
+            content: ['Masz specyficzną potrzebę?', 'Zaprojektujemy razem.'],
+            tag: null,
+          },
+        ],
+      },
+      formats: {
+        title: 'Formaty',
+        items: [
+          {
+            title: 'Pół dnia',
+            duration: '4 godz.',
+            description: '2–3 moduły. Na start lub do konkretnego tematu.',
+          },
+          {
+            title: 'Cały dzień',
+            duration: '8 godz.',
+            description: 'Dogłębne szkolenie z praktyką.',
+          },
+          {
+            title: 'Kilkudniowe',
+            duration: 'Ustalamy indywidualnie',
+            description: 'Pełny program. Szkolenia dla całej firmy.',
+          },
+        ],
+      },
+      whyUs: {
+        title: 'Dlaczego my',
+        stats: ['500+ PRZESZKOLONYCH', 'PRAKTYCY, NIE TEORETYCY', 'PRAWDZIWE PROJEKTY, NIE DEMO'],
+      },
+      cta: {
+        title: 'Zaprojektujmy Twój warsztat',
+        subtitle: 'Opowiedz o zespole. Dobierzemy moduły i format.',
+        button: 'Umów rozmowę',
+        footer: 'Lub mailowo: hello@radiant2.dev',
+      },
     },
     footer: {
       email: 'radiant2.dev@gmail.com',

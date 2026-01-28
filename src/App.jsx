@@ -176,8 +176,8 @@ function App() {
       <Header content={content} language={language} onLanguageChange={handleLanguageChange} />
 
       <Routes>
-        <Route path="/workshops" element={<Workshops />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/workshops" element={<Workshops content={content} />} />
+        <Route path="/projects" element={<Projects content={content} />} />
         <Route path="/on-prem" element={<OnPrem />} />
         <Route
           path="/contact"
