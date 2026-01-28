@@ -23,4 +23,21 @@ dist-ssr
 *.sln
 *.sw?
 
-package-p
+# Lock files (keep only one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+.vite
+.turbo
+coverage
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# OS files
+Thumbs.db

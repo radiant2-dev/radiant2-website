@@ -38,66 +38,80 @@ export default function Contact({ content, language }) {
 
       {/* FORM SECTION */}
       <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-2xl space-y-8 px-6">
-          <h2 className="text-2xl font-semibold text-slate-900 text-center">
-            {content.contact.formHeading}
-          </h2>
+        <div className="mx-auto max-w-2xl px-6">
+          <div className="border border-slate-200 p-8 sm:p-12">
+            <h2 className="text-2xl font-semibold text-slate-900 text-center mb-8">
+              {content.contact.formHeading}
+            </h2>
 
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-xs font-medium text-slate-500">
-                {content.contact.form.name} *
-              </label>
-              <input
-                type="text"
-                id="name"
-                required
-                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-0"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-xs font-medium text-slate-500">
-                {content.contact.form.email} *
-              </label>
-              <input
-                type="email"
-                id="email"
-                required
-                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-0"
-              />
-            </div>
-            <div>
-              <label htmlFor="company" className="block text-xs font-medium text-slate-500">
-                {content.contact.form.company}
-              </label>
-              <input
-                type="text"
-                id="company"
-                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-0"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-xs font-medium text-slate-500">
-                {content.contact.form.message} *
-              </label>
-              <textarea
-                id="message"
-                required
-                rows="6"
-                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-neutral-900 focus:outline-none focus:ring-0"
-              />
-            </div>
-            <button
-              type="submit"
-              className="mt-8 w-full border border-neutral-900 bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-neutral-900"
-            >
-              {content.contact.form.submit}
-            </button>
-          </form>
+            <form className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
+                  {content.contact.form.name} *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
+                  {content.contact.form.email} *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="company"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
+                  {content.contact.form.company}
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
+                  {content.contact.form.message} *
+                </label>
+                <textarea
+                  id="message"
+                  required
+                  rows="6"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                />
+              </div>
+              <button
+                type="submit"
+                className="mt-8 w-full border border-neutral-900 bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-neutral-900"
+              >
+                {content.contact.form.submit}
+              </button>
+            </form>
 
-          <p className="border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-            {content.contact.email}
-          </p>
+            <p className="border-t border-slate-200 pt-8 mt-8 text-center text-sm text-slate-500">
+              {content.contact.email}
+            </p>
+          </div>
         </div>
       </section>
     </main>
