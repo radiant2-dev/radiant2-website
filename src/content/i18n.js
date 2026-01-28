@@ -132,7 +132,7 @@ const translations = {
       ],
       primaryCta: 'Book a free 30-min call',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
-      formHeading: 'Prefer to write?',
+      formHeading: 'Contact us',
       form: {
         name: 'Name',
         email: 'Email',
@@ -555,7 +555,7 @@ const translations = {
       ],
       primaryCta: 'Umów pierwszą rozmowę (30 min)',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
-      formHeading: 'Wolisz napisać?',
+      formHeading: 'Skontaktuj się z nami',
       form: {
         name: 'Imię',
         email: 'Email',
