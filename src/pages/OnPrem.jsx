@@ -38,42 +38,54 @@ export default function OnPrem() {
                 <Shield className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Data Privacy</h3>
               </div>
-              <p className="text-slate-600">Sensitive data never leaves your infrastructure. Full GDPR compliance.</p>
+              <p className="text-slate-600">
+                Sensitive data never leaves your infrastructure. Full GDPR compliance.
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <div className="flex items-center gap-3">
                 <TrendingDown className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Cost Control</h3>
               </div>
-              <p className="text-slate-600">No per-token costs. Predictable infrastructure spend.</p>
+              <p className="text-slate-600">
+                No per-token costs. Predictable infrastructure spend.
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <div className="flex items-center gap-3">
                 <Zap className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Low Latency</h3>
               </div>
-              <p className="text-slate-600">Models run on your network. Millisecond response times.</p>
+              <p className="text-slate-600">
+                Models run on your network. Millisecond response times.
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <div className="flex items-center gap-3">
                 <Settings className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Custom Models</h3>
               </div>
-              <p className="text-slate-600">Fine-tune and deploy proprietary models for your domain.</p>
+              <p className="text-slate-600">
+                Fine-tune and deploy proprietary models for your domain.
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <div className="flex items-center gap-3">
                 <ServerOff className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Air-gapped</h3>
               </div>
-              <p className="text-slate-600">Run AI in isolated environments with no internet access.</p>
+              <p className="text-slate-600">
+                Run AI in isolated environments with no internet access.
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <div className="flex items-center gap-3">
                 <Unlock className="h-5 w-5 flex-shrink-0 text-slate-400" strokeWidth={1.5} />
                 <h3 className="text-xl font-semibold text-slate-900">Vendor Independence</h3>
               </div>
-              <p className="text-slate-600">No lock-in to cloud providers. Full ownership of your stack.</p>
+              <p className="text-slate-600">
+                No lock-in to cloud providers. Full ownership of your stack.
+              </p>
             </div>
           </div>
         </div>

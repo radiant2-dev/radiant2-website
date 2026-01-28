@@ -45,7 +45,9 @@ function ProblemSection({ content }) {
             </li>
           ))}
         </ul>
-        <p className="border-t border-slate-200 pt-8 text-base font-medium text-slate-900">{content.problem.transition}</p>
+        <p className="border-t border-slate-200 pt-8 text-base font-medium text-slate-900">
+          {content.problem.transition}
+        </p>
       </div>
     </section>
   );
@@ -112,7 +114,9 @@ function ProofSection({ content }) {
                 />
               </div>
               <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">{event.event}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                  {event.event}
+                </p>
                 <p className="text-sm text-slate-600">{event.venue}</p>
                 <p className="text-base font-medium text-slate-900">{event.talkTitle}</p>
                 {event.videoUrl && (
@@ -144,7 +148,10 @@ function ProcessSection({ content }) {
         <div className="hidden lg:block">
           <div className="relative">
             {/* Connecting line */}
-            <div className="absolute left-0 right-0 top-[30px] mx-auto h-[2px] w-[calc(100%-120px)] bg-slate-200" style={{ marginLeft: '60px', marginRight: '60px' }}></div>
+            <div
+              className="absolute left-0 right-0 top-[30px] mx-auto h-[2px] w-[calc(100%-120px)] bg-slate-200"
+              style={{ marginLeft: '60px', marginRight: '60px' }}
+            ></div>
 
             <div className="relative grid grid-cols-4 gap-8">
               {content.process.steps.map((step, index) => (
@@ -279,9 +286,7 @@ function ServiceStatement({ content }) {
   return (
     <section className="border-b border-slate-100 bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-3xl space-y-6 px-6 text-center">
-        <p className="text-base leading-relaxed text-slate-600">
-          {content.serviceStatement.text}
-        </p>
+        <p className="text-base leading-relaxed text-slate-600">{content.serviceStatement.text}</p>
         <Link
           to="/contact"
           className="inline-block border border-slate-900 px-6 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white"
@@ -312,7 +317,9 @@ function ContactSection({ content }) {
           </Link>
         </div>
 
-        <p className="border-t border-slate-200 pt-8 text-center text-sm text-slate-500">{content.contact.email}</p>
+        <p className="border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
+          {content.contact.email}
+        </p>
       </div>
     </section>
   );

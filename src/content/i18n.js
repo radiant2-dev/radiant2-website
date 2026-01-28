@@ -101,12 +101,14 @@ const translations = {
         {
           number: '2',
           title: 'Clear Proposal',
-          description: "Scope, timeline, price. No surprises. You know exactly what you're getting.",
+          description:
+            "Scope, timeline, price. No surprises. You know exactly what you're getting.",
         },
         {
           number: '3',
           title: 'We Deliver',
-          description: 'Workshops, systems, infrastructure - with regular updates and working results.',
+          description:
+            'Workshops, systems, infrastructure - with regular updates and working results.',
         },
         {
           number: '4',
@@ -240,8 +242,7 @@ const translations = {
         'Martwisz się o prywatność danych przy chmurowych narzędziach AI',
         'Potrzebujesz ekspertyzy AI, ale nie możesz uzasadnić pełnoetatowego zatrudnienia',
       ],
-      transition:
-        'Słyszymy to co tydzień od CTO i liderów innowacji. Tak możemy pomóc.',
+      transition: 'Słyszymy to co tydzień od CTO i liderów innowacji. Tak możemy pomóc.',
     },
     services: {
       title: 'Nasze usługi',
@@ -335,7 +336,8 @@ const translations = {
     },
     contact: {
       title: 'Gotowy żeby zacząć?',
-      subtitle: 'Nie wiesz od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
+      subtitle:
+        'Nie wiesz od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
       primaryCta: 'Umów bezpłatną rozmowę (30 min)',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Wolisz napisać?',

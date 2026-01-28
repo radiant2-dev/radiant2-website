@@ -34,27 +34,39 @@ export default function Projects() {
           <div className="grid gap-12 sm:grid-cols-3">
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">AI Agents</h3>
-              <p className="text-slate-600">Autonomous systems that take actions, use tools, and make decisions</p>
+              <p className="text-slate-600">
+                Autonomous systems that take actions, use tools, and make decisions
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">RAG Systems</h3>
-              <p className="text-slate-600">Connect LLMs to your knowledge base for accurate, grounded answers</p>
+              <p className="text-slate-600">
+                Connect LLMs to your knowledge base for accurate, grounded answers
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">Document Processing</h3>
-              <p className="text-slate-600">Extract, classify, and summarize data from PDFs, emails, and scans</p>
+              <p className="text-slate-600">
+                Extract, classify, and summarize data from PDFs, emails, and scans
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">Custom Workflows</h3>
-              <p className="text-slate-600">Automate complex multi-step processes with AI decision points</p>
+              <p className="text-slate-600">
+                Automate complex multi-step processes with AI decision points
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">API Integrations</h3>
-              <p className="text-slate-600">Connect AI to your existing tools, databases, and infrastructure</p>
+              <p className="text-slate-600">
+                Connect AI to your existing tools, databases, and infrastructure
+              </p>
             </div>
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-xl font-semibold text-slate-900">Fine-tuned Models</h3>
-              <p className="text-slate-600">Train models on your data for domain-specific performance</p>
+              <p className="text-slate-600">
+                Train models on your data for domain-specific performance
+              </p>
             </div>
           </div>
         </div>
@@ -73,8 +85,9 @@ export default function Projects() {
               </div>
               <div className="sm:col-span-2">
                 <p className="text-sm text-slate-600">
-                  We start by understanding your business problem, data landscape, and technical constraints.
-                  No sales pitch—just an honest assessment of whether AI is the right solution and what approach makes sense.
+                  We start by understanding your business problem, data landscape, and technical
+                  constraints. No sales pitch—just an honest assessment of whether AI is the right
+                  solution and what approach makes sense.
                 </p>
               </div>
             </div>
@@ -86,8 +99,8 @@ export default function Projects() {
               </div>
               <div className="sm:col-span-2">
                 <p className="text-sm text-slate-600">
-                  We build a working prototype in 2-4 weeks. You see real results with your data before committing
-                  to full development. If it doesn't work, you know early.
+                  We build a working prototype in 2-4 weeks. You see real results with your data
+                  before committing to full development. If it doesn't work, you know early.
                 </p>
               </div>
             </div>
@@ -99,8 +112,8 @@ export default function Projects() {
               </div>
               <div className="sm:col-span-2">
                 <p className="text-sm text-slate-600">
-                  We turn the prototype into a robust system. Error handling, monitoring, testing, security,
-                  and integration with your existing stack. Code you can maintain.
+                  We turn the prototype into a robust system. Error handling, monitoring, testing,
+                  security, and integration with your existing stack. Code you can maintain.
                 </p>
               </div>
             </div>
@@ -112,8 +125,8 @@ export default function Projects() {
               </div>
               <div className="sm:col-span-2">
                 <p className="text-sm text-slate-600">
-                  We deploy to your infrastructure (cloud or on-prem), document everything, and train your team.
-                  You own the code and know how to operate it.
+                  We deploy to your infrastructure (cloud or on-prem), document everything, and
+                  train your team. You own the code and know how to operate it.
                 </p>
               </div>
             </div>
@@ -137,16 +150,16 @@ export default function Projects() {
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-lg font-semibold text-slate-900">Customer Support Automation</h3>
               <p className="text-sm text-slate-600">
-                SaaS company: AI agent handles tier-1 support tickets, searches docs, suggests solutions,
-                escalates when needed. 60% ticket deflection rate.
+                SaaS company: AI agent handles tier-1 support tickets, searches docs, suggests
+                solutions, escalates when needed. 60% ticket deflection rate.
               </p>
             </div>
 
             <div className="space-y-3 border-t border-slate-200 pt-6">
               <h3 className="text-lg font-semibold text-slate-900">Medical Report Processing</h3>
               <p className="text-sm text-slate-600">
-                Healthcare provider: Extract structured data from unstructured clinical notes and lab reports.
-                HIPAA-compliant, on-premise deployment.
+                Healthcare provider: Extract structured data from unstructured clinical notes and
+                lab reports. HIPAA-compliant, on-premise deployment.
               </p>
             </div>
 
@@ -203,7 +216,8 @@ export default function Projects() {
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold sm:text-4xl">Have a project in mind?</h2>
             <p className="text-base text-slate-600">
-              Tell us what you're trying to build. We'll give you an honest take on feasibility, approach, and timeline.
+              Tell us what you're trying to build. We'll give you an honest take on feasibility,
+              approach, and timeline.
             </p>
           </div>
           <Link

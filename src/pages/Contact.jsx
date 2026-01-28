@@ -34,12 +34,11 @@ export default function Contact({ content, calendlyLoaded }) {
           <div className="grid gap-16 lg:grid-cols-2">
             {/* Left: Calendly Inline Widget */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-semibold text-slate-900">{content.contact.primaryCta}</h2>
+              <h2 className="text-2xl font-semibold text-slate-900">
+                {content.contact.primaryCta}
+              </h2>
               {calendlyLoaded ? (
-                <div
-                  ref={calendlyRef}
-                  style={{ minWidth: '320px', height: '700px' }}
-                ></div>
+                <div ref={calendlyRef} style={{ minWidth: '320px', height: '700px' }}></div>
               ) : (
                 <div
                   className="flex items-center justify-center bg-slate-50"
@@ -52,7 +51,9 @@ export default function Contact({ content, calendlyLoaded }) {
 
             {/* Right: Contact Form */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-semibold text-slate-900">{content.contact.formHeading}</h2>
+              <h2 className="text-2xl font-semibold text-slate-900">
+                {content.contact.formHeading}
+              </h2>
 
               <form className="space-y-6">
                 <div>

@@ -116,7 +116,9 @@ export default function Workshops() {
                 <li>• API integrations</li>
                 <li>• Your use cases, workshopped live</li>
               </ul>
-              <p className="text-xs font-medium text-slate-500">Best for: Teams with specific goals</p>
+              <p className="text-xs font-medium text-slate-500">
+                Best for: Teams with specific goals
+              </p>
             </div>
 
             {/* Module 6 */}
@@ -175,7 +177,9 @@ export default function Workshops() {
 
             <div className="space-y-2 text-center">
               <p className="text-xl font-bold text-slate-900">Practitioners</p>
-              <p className="text-xs uppercase tracking-wider text-slate-500">teaching, not theorists</p>
+              <p className="text-xs uppercase tracking-wider text-slate-500">
+                teaching, not theorists
+              </p>
             </div>
 
             <div className="space-y-2 text-center">

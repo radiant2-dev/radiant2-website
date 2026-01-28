@@ -63,7 +63,9 @@ function Header({ content, language, onLanguageChange }) {
                 className={`px-2 py-1 text-xs transition hover:text-slate-900 sm:py-1.5 sm:text-sm ${
                   index === 0 ? 'pl-0 sm:pl-2' : ''
                 } ${
-                  isActive ? 'underline decoration-[0.5px] decoration-slate-700 underline-offset-4' : ''
+                  isActive
+                    ? 'underline decoration-[0.5px] decoration-slate-700 underline-offset-4'
+                    : ''
                 }`}
               >
                 {link.label}
@@ -112,7 +114,10 @@ function Footer({ content }) {
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-5xl px-6 py-16 text-center">
         <p className="text-sm">
-          <a href={`mailto:${content.footer.email}`} className="text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700">
+          <a
+            href={`mailto:${content.footer.email}`}
+            className="text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+          >
             {content.footer.email}
           </a>
         </p>
@@ -166,7 +171,6 @@ function App() {
     };
   }, []);
 
-
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Header content={content} language={language} onLanguageChange={handleLanguageChange} />
@@ -175,7 +179,10 @@ function App() {
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/on-prem" element={<OnPrem />} />
-        <Route path="/contact" element={<Contact content={content} calendlyLoaded={calendlyLoaded} />} />
+        <Route
+          path="/contact"
+          element={<Contact content={content} calendlyLoaded={calendlyLoaded} />}
+        />
         <Route path="/" element={<Home content={content} language={language} />} />
       </Routes>
 
