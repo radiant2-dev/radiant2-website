@@ -40,7 +40,7 @@ function ProblemSection({ content }) {
         <ul className="space-y-4 text-slate-600">
           {content.problem.painPoints.map((point, index) => (
             <li key={index} className="flex items-start gap-3 leading-relaxed">
-              <span className="mt-1.5 flex-shrink-0 text-xs text-slate-300">—</span>
+              <span className="mt-1.5 flex-shrink-0 text-xs text-slate-300">-</span>
               <span className="text-base">{point}</span>
             </li>
           ))}
@@ -55,16 +55,16 @@ function ProblemSection({ content }) {
 
 function ServicesSection({ content }) {
   return (
-    <section id="services" className="border-t border-slate-200 bg-white py-20 sm:py-28">
+    <section id="services" className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl space-y-12 px-6">
         <div className="grid gap-16 sm:grid-cols-3">
           {content.services.items.map((service, index) => (
             <div key={index} className="space-y-4">
-              <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
-              <p className="leading-relaxed text-slate-600">{service.description}</p>
+              <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+              <p className="leading-relaxed text-neutral-300">{service.description}</p>
               <Link
                 to="/contact"
-                className="inline-block text-sm font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+                className="inline-block text-sm font-medium text-white underline decoration-[0.5px] underline-offset-4 hover:text-neutral-300"
               >
                 {service.link}
               </Link>
@@ -100,13 +100,13 @@ function PositioningSection({ content }) {
 
 function ProofSection({ content }) {
   return (
-    <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+    <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl space-y-12 px-6">
-        <h2 className="text-3xl font-semibold sm:text-4xl">{content.proof.title}</h2>
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.proof.title}</h2>
         <div className="grid gap-12 sm:grid-cols-2">
           {content.proof.events.map((event, index) => (
             <div key={index} className="space-y-6">
-              <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-800">
                 <img
                   src={event.image}
                   alt={`${event.event} - ${event.talkTitle}`}
@@ -114,17 +114,17 @@ function ProofSection({ content }) {
                 />
               </div>
               <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400">
                   {event.event}
                 </p>
-                <p className="text-sm text-slate-600">{event.venue}</p>
-                <p className="text-base font-medium text-slate-900">{event.talkTitle}</p>
+                <p className="text-sm text-neutral-300">{event.venue}</p>
+                <p className="text-base font-medium text-white">{event.talkTitle}</p>
                 {event.videoUrl && (
                   <a
                     href={event.videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block pt-2 text-sm font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+                    className="inline-block pt-2 text-sm font-medium text-white underline decoration-[0.5px] underline-offset-4 hover:text-neutral-300"
                   >
                     {event.cta}
                   </a>
@@ -156,12 +156,12 @@ function ProcessSection({ content }) {
             <div className="relative grid grid-cols-4 gap-8">
               {content.process.steps.map((step, index) => (
                 <div key={index} className="space-y-6">
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-start">
                     <div className="flex h-[60px] w-[60px] items-center justify-center bg-white text-3xl font-bold text-slate-900">
                       0{step.number}
                     </div>
                   </div>
-                  <div className="space-y-3 text-center">
+                  <div className="space-y-3 text-left">
                     <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
                     <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
                   </div>
@@ -176,7 +176,7 @@ function ProcessSection({ content }) {
           {content.process.steps.map((step, index) => (
             <div key={index} className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-slate-900 text-2xl font-bold text-slate-900">
+                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-neutral-900 text-2xl font-bold text-slate-900">
                   0{step.number}
                 </div>
               </div>
@@ -198,7 +198,7 @@ function ProcessSection({ content }) {
               )}
 
               <div className="relative flex-shrink-0">
-                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-slate-900 bg-white text-2xl font-bold text-slate-900">
+                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-neutral-900 bg-white text-2xl font-bold text-slate-900">
                   0{step.number}
                 </div>
               </div>
@@ -214,85 +214,13 @@ function ProcessSection({ content }) {
   );
 }
 
-function TeamSection({ content }) {
-  const founderPhotos = {
-    'Wojciech Ptasiński': '/wojtek.png',
-    'Maciej Ziaja': null,
-  };
-
-  return (
-    <section id="team" className="border-t border-slate-200 bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl space-y-16 px-6">
-        <h2 className="text-3xl font-semibold sm:text-4xl">{content.team.title}</h2>
-        <div className="grid gap-16 sm:grid-cols-2">
-          {content.team.founders.map((founder, index) => (
-            <div key={index} className="space-y-6">
-              <div className="aspect-square w-full max-w-[240px] overflow-hidden bg-slate-100">
-                {founderPhotos[founder.name] ? (
-                  <img
-                    src={founderPhotos[founder.name]}
-                    alt={`${founder.name} - ${founder.role}`}
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center text-xs text-slate-400">
-                    [Photo]
-                  </div>
-                )}
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">{founder.name}</h3>
-                  <p className="text-xs uppercase tracking-wider text-slate-500">{founder.role}</p>
-                </div>
-                <p className="text-sm leading-relaxed text-slate-600">{founder.bio}</p>
-                <div className="flex gap-4 pt-2">
-                  {founder.links.linkedin && (
-                    <a
-                      href={founder.links.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
-                    >
-                      LinkedIn
-                    </a>
-                  )}
-                  {founder.links.website && (
-                    <a
-                      href={founder.links.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
-                    >
-                      {founder.links.website.replace('https://', '')}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="border-t border-slate-200 pt-12">
-          <blockquote className="border-l-2 border-slate-300 pl-6 text-base italic leading-relaxed text-slate-700">
-            "{content.team.closing}"
-          </blockquote>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function ServiceStatement({ content }) {
   return (
-    <section className="border-b border-slate-100 bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-3xl space-y-6 px-6 text-center">
-        <p className="text-base leading-relaxed text-slate-600">{content.serviceStatement.text}</p>
-        <Link
-          to="/contact"
-          className="inline-block border border-slate-900 px-6 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white"
-        >
-          {content.serviceStatement.cta}
-        </Link>
+    <section className="border-t border-neutral-700 bg-neutral-900 py-12 sm:py-16">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <p className="text-base leading-relaxed text-neutral-300">
+          {content.serviceStatement.text}
+        </p>
       </div>
     </section>
   );
@@ -311,7 +239,7 @@ function ContactSection({ content }) {
         <div className="flex justify-center">
           <Link
             to="/contact"
-            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+            className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
             {content.contact.primaryCta}
           </Link>
@@ -339,7 +267,6 @@ export default function Home({ content, language }) {
         <PositioningSection content={content} />
         <ProofSection content={content} />
         <ProcessSection content={content} />
-        <TeamSection content={content} />
         <ServiceStatement content={content} />
         <ContactSection content={content} />
       </main>

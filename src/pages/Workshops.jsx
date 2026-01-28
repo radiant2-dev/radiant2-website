@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 
-export default function Workshops() {
+export default function Workshops({ content, language }) {
   useEffect(() => {
     document.title = 'AI Workshops & Training | Radiant2';
   }, []);
@@ -9,19 +10,30 @@ export default function Workshops() {
   return (
     <main>
       {/* HERO SECTION */}
-      <section className="relative flex min-h-[520px] items-center bg-[url('/hero_background.jpg')] bg-cover bg-center">
+      <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
-        <div className="relative mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
-          <h1 className="text-4xl font-semibold sm:text-5xl">AI training that actually sticks</h1>
-          <p className="text-lg text-slate-900">
-            Hands-on workshops for technical and non-technical teams
-          </p>
+        <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-5xl font-semibold sm:text-6xl">{content.workshops.hero.title}</h2>
+          <h3
+            className="text-3xl font-mono"
+            style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+          >
+            {content.workshops.hero.subtitle}{' '}
+            <Typewriter
+              key={language}
+              options={{
+                strings: content.workshops.hero.typewriter,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h3>
           <div className="pt-4">
             <Link
               to="/contact"
-              className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700"
+              className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700"
             >
-              Book a call
+              {content.workshops.hero.cta}
             </Link>
           </div>
         </div>
@@ -30,24 +42,76 @@ export default function Workshops() {
       {/* WHO IT'S FOR SECTION */}
       <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Who it's for</h2>
+          <h2 className="text-3xl font-semibold sm:text-4xl">
+            {content.workshops.whoItsFor.title}
+          </h2>
           <div className="grid gap-12 sm:grid-cols-2">
-            <div className="space-y-3 border-t border-slate-200 pt-6">
-              <h3 className="text-xl font-semibold text-slate-900">Technical Teams</h3>
-              <p className="text-slate-600">Build with LLMs, agents, RAG systems</p>
-            </div>
-            <div className="space-y-3 border-t border-slate-200 pt-6">
-              <h3 className="text-xl font-semibold text-slate-900">Executives</h3>
-              <p className="text-slate-600">Evaluate AI opportunities and risks</p>
-            </div>
-            <div className="space-y-3 border-t border-slate-200 pt-6">
-              <h3 className="text-xl font-semibold text-slate-900">Mixed Teams</h3>
-              <p className="text-slate-600">Cross-functional AI adoption</p>
-            </div>
-            <div className="space-y-3 border-t border-slate-200 pt-6">
-              <h3 className="text-xl font-semibold text-slate-900">HR / L&D</h3>
-              <p className="text-slate-600">Upskilling programs at scale</p>
-            </div>
+            {content.workshops.whoItsFor.items.map((item, index) => (
+              <div key={index} className="space-y-3 border-t border-slate-200 pt-6">
+                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+                <p className="text-slate-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FORMATS SECTION */}
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
+        <div className="mx-auto max-w-5xl space-y-12 px-6">
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            {content.workshops.formats.title}
+          </h2>
+          <div className="grid gap-12 sm:grid-cols-3">
+            {content.workshops.formats.items.map((format, index) => {
+              // Icon rendering logic based on format index
+              const renderIcon = () => {
+                if (index === 0) {
+                  // Half-day icon: single rectangle with mixed borders
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div
+                        className="w-10 h-10"
+                        style={{
+                          borderTop: '2px dashed white',
+                          borderRight: '2px dashed white',
+                          borderBottom: '2px solid white',
+                          borderLeft: '2px solid white',
+                        }}
+                      ></div>
+                    </div>
+                  );
+                } else if (index === 1) {
+                  // Full-day icon: single rectangle with all solid borders
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div className="w-10 h-10 border-2 border-solid border-white"></div>
+                    </div>
+                  );
+                } else if (index === 2) {
+                  // Multi-day icon: three rectangles
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div className="flex gap-2">
+                        <div className="w-10 h-10 border-2 border-solid border-white"></div>
+                        <div className="w-10 h-10 border-2 border-dashed border-white"></div>
+                        <div className="w-10 h-10 border-2 border-dashed border-white"></div>
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
+              };
+
+              return (
+                <div key={index} className="space-y-3">
+                  {renderIcon()}
+                  <h3 className="text-xl font-semibold text-white">{format.title}</h3>
+                  <p className="text-sm font-medium text-neutral-400">{format.duration}</p>
+                  <p className="text-sm leading-relaxed text-neutral-300">{format.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -56,144 +120,48 @@ export default function Workshops() {
       <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Choose your modules</h2>
-            <p className="text-base text-slate-600">
-              We build your workshop from proven modules. Pick what matters. Skip what doesn't.
-            </p>
+            <h2 className="text-3xl font-semibold sm:text-4xl">
+              {content.workshops.modules.title}
+            </h2>
+            <p className="text-base text-slate-600">{content.workshops.modules.subtitle}</p>
           </div>
 
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Module 1 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">Foundations</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• AI landscape: what's real vs. hype</li>
-                <li>• LLMs, agents, embeddings explained</li>
-                <li>• Prompt engineering fundamentals</li>
-              </ul>
-              <p className="text-xs font-medium text-slate-500">Best for: All levels</p>
-            </div>
-
-            {/* Module 2 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">Prompt Engineering</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• Advanced prompting techniques</li>
-                <li>• Chain-of-thought, few-shot learning</li>
-                <li>• AI workflows</li>
-                <li>• Hands-on with real use cases</li>
-              </ul>
-              <p className="text-xs font-medium text-slate-500">Best for: All levels</p>
-            </div>
-
-            {/* Module 3 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">Building Agents</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• Agent architectures</li>
-                <li>• Tools and function calling</li>
-                <li>• Building your first agent</li>
-              </ul>
-              <p className="text-xs font-medium text-slate-500">Best for: Developers</p>
-            </div>
-
-            {/* Module 4 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">RAG Systems</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• Retrieval-augmented generation</li>
-                <li>• Vector databases and embeddings</li>
-                <li>• Building a knowledge base</li>
-              </ul>
-              <p className="text-xs font-medium text-slate-500">Best for: Developers, data teams</p>
-            </div>
-
-            {/* Module 5 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">AI in Your Workflow</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• Identifying automation opportunities</li>
-                <li>• API integrations</li>
-                <li>• Your use cases, workshopped live</li>
-              </ul>
-              <p className="text-xs font-medium text-slate-500">
-                Best for: Teams with specific goals
-              </p>
-            </div>
-
-            {/* Module 6 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900">Custom Module</h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li>• Something specific?</li>
-                <li>• We'll design it together.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FORMATS SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Formats</h2>
-          <div className="grid gap-12 sm:grid-cols-3">
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-slate-900">Half-day</h3>
-              <p className="text-sm font-medium text-slate-500">4 hours</p>
-              <p className="text-sm leading-relaxed text-slate-600">
-                2-3 modules. First exposure or focused skill-building.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-slate-900">Full-day</h3>
-              <p className="text-sm font-medium text-slate-500">8 hours</p>
-              <p className="text-sm leading-relaxed text-slate-600">
-                Deep training with hands-on work.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-slate-900">Multi-day</h3>
-              <p className="text-sm font-medium text-slate-500">Custom</p>
-              <p className="text-sm leading-relaxed text-slate-600">
-                Full curriculum. Organization-wide programs.
-              </p>
-            </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {content.workshops.modules.items.map((module, index) => (
+              <div key={index} className="space-y-4 border border-slate-200 p-6">
+                <h3 className="text-lg font-semibold text-slate-900">{module.title}</h3>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {module.content.map((item, i) => (
+                    <li key={i}>• {item}</li>
+                  ))}
+                </ul>
+                {module.tag && <p className="text-xs font-medium text-slate-500">{module.tag}</p>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* WHY US SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Why us</h2>
-          <div className="grid gap-12 border-t border-slate-200 pt-12 sm:grid-cols-3">
-            <div className="space-y-2 text-center">
-              <p className="text-2xl font-bold text-slate-900 sm:text-3xl">500+</p>
-              <p className="text-xs uppercase tracking-wider text-slate-500">people trained</p>
-            </div>
-
-            <div className="space-y-2 text-center">
-              <p className="text-xl font-bold text-slate-900">Practitioners</p>
-              <p className="text-xs uppercase tracking-wider text-slate-500">
-                teaching, not theorists
-              </p>
-            </div>
-
-            <div className="space-y-2 text-center">
-              <p className="text-xl font-bold text-slate-900">Real things</p>
-              <p className="text-xs uppercase tracking-wider text-slate-500">not toy examples</p>
-            </div>
+          <div className="space-y-6">
+            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+              {content.workshops.whyUs.title}
+            </h2>
+            <p className="text-base leading-relaxed text-neutral-300">
+              {content.workshops.whyUs.body}
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS PLACEHOLDER */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="text-sm italic text-slate-400">[Client testimonials coming soon]</p>
+          <div className="grid gap-12 border-t border-neutral-700 pt-12 sm:grid-cols-3">
+            {content.workshops.whyUs.stats.map((stat, index) => (
+              <div key={index} className="space-y-2 text-center">
+                <p className="text-2xl font-bold text-white sm:text-3xl">{stat.number}</p>
+                <p className="text-xs uppercase tracking-wider text-neutral-400">{stat.label}</p>
+                <p className="pt-1 text-xs leading-relaxed text-neutral-400">{stat.subtext}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -201,17 +169,16 @@ export default function Workshops() {
       <section className="border-t border-slate-200 bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-2xl space-y-8 px-6 text-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Ready to train your team?</h2>
-            <p className="text-base text-slate-600">
-              Book a call to discuss your training needs. We'll design the right program for you.
-            </p>
+            <h2 className="text-3xl font-semibold sm:text-4xl">{content.workshops.cta.title}</h2>
+            <p className="text-base text-slate-600">{content.workshops.cta.subtitle}</p>
           </div>
           <Link
             to="/contact"
-            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+            className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
-            Book a call
+            {content.workshops.cta.button}
           </Link>
+          <p className="pt-4 text-sm text-slate-500">{content.workshops.cta.footer}</p>
         </div>
       </section>
     </main>
