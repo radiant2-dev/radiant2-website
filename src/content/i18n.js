@@ -4,13 +4,131 @@ const translations = {
       language: 'Language',
     },
     nav: {
-      offer: 'Offer',
+      services: 'Services',
       team: 'Team',
       contact: 'Contact',
     },
     hero: {
       title: 'Supercharge your company with AI',
       typewriter: ['for bussiness automation', 'for industrial processes', 'workshops'],
+    },
+    serviceStatement: {
+      text: 'We deliver AI workshops, custom automations, and on-premise infrastructure.',
+      cta: 'Book a free strategy call',
+    },
+    problem: {
+      title: 'Sound familiar?',
+      painPoints: [
+        'Your team tried ChatGPT... now what?',
+        "You know AI matters, but don't know where to start",
+        "You've talked to consultants who speak only in buzzwords",
+        "You're worried about data privacy with cloud AI tools",
+        "You need AI expertise but can't justify a full-time hire",
+      ],
+      transition: "We hear this every week from CTOs and innovation leads. Here's how we help.",
+    },
+    services: {
+      title: 'Our Services',
+      items: [
+        {
+          title: 'AI Workshops & Training',
+          description:
+            'Hands-on training for technical and non-technical teams. From first prompt to production-ready skills.',
+          link: 'Learn more →',
+        },
+        {
+          title: 'AI Automations & Agents',
+          description:
+            'Custom AI systems that work. Agents, workflows, integrations built for your business.',
+          link: 'Learn more →',
+        },
+        {
+          title: 'On-Premise AI Setup',
+          description:
+            'Local LLMs, RAG systems, private infrastructure. Your data never leaves your servers.',
+          link: 'Learn more →',
+        },
+      ],
+    },
+    positioning: {
+      title: "We've done this before.",
+      body: "We've trained teams, built production AI systems, and deployed private infrastructure - in industries where failure isn't an option.",
+      stats: [
+        {
+          number: '500+',
+          label: 'people trained',
+          subtext: 'From executives to developers',
+        },
+        {
+          number: 'Production AI',
+          label: 'in regulated industries',
+          subtext: 'Banking, aerospace, industrial',
+        },
+        {
+          number: 'On-prem',
+          label: 'systems deployed',
+          subtext: 'For data-sensitive organizations',
+        },
+      ],
+    },
+    proof: {
+      title: 'Seen on big stages',
+      events: [
+        {
+          image: '/gcsummit.png',
+          event: 'GOOGLE CLOUD SUMMIT WARSAW 2024',
+          venue: 'National Stadium',
+          talkTitle: 'AI-Powered Smart Contracts in Next-Gen Banking',
+          cta: 'See the event →',
+          videoUrl: 'https://youtu.be/HZf2PursXBY?si=BHiau_31EFYc_KIE',
+        },
+        {
+          image: '/maciek-konfa.png',
+          event: 'SRIN – EUROPEAN SPACE AGENCY CENTRE FOR EARTH OBSERVATION',
+          venue: 'Frascati (Rome), Italy',
+          talkTitle: 'Super-resolution satellite AI vision systems',
+        },
+      ],
+    },
+    process: {
+      title: 'How it works',
+      steps: [
+        {
+          number: '1',
+          title: 'Free Strategy Call',
+          description: '30 minutes. You talk, we listen. No pitch deck, no pressure.',
+        },
+        {
+          number: '2',
+          title: 'Clear Proposal',
+          description: "Scope, timeline, price. No surprises. You know exactly what you're getting.",
+        },
+        {
+          number: '3',
+          title: 'We Deliver',
+          description: 'Workshops, systems, infrastructure - with regular updates and working results.',
+        },
+        {
+          number: '4',
+          title: 'You Grow',
+          description: "We build capability, not dependency. Our goal: you don't need us forever.",
+        },
+      ],
+    },
+    contact: {
+      title: 'Ready to start?',
+      subtitle: "Not sure where to begin? Most of our clients weren't either. Let's talk.",
+      primaryCta: 'Book a free 30-min call',
+      calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
+      formHeading: 'Prefer to write?',
+      form: {
+        name: 'Name',
+        email: 'Email',
+        company: 'Company',
+        message: 'What do you need help with?',
+        submit: 'Send message',
+      },
+      email: 'Or email directly: radiant2.dev@gmail.com',
     },
     offer: {
       title: 'Our offer',
@@ -68,24 +186,32 @@ const translations = {
       },
     },
     team: {
-      title: 'Our Team',
-      subtitle:
-        'We are AI specialists with experience in business, industrial applications, and research. We work in places where AI meets real-world challenges to make measurable impact.',
-      founders: 'Meet our founders',
-      roles: {
-        coFounder: 'Co-founder',
-      },
-      founderBios: [
-        "AI RnD Lead with 7+ years across financial and industrial sectors, delivering cutting-edge innovations - highlighted by AI solutions for Europe's #1 bank. He architects production-grade AI systems, agentic apps, and integrations driving business automation. A Google Cloud Summit Warsaw speaker, he leads specialized AI workshops for enterprises.",
-        "AI specialist with 5+ years of experience in RnD development and academic resaerch in frontier domains such as aerospace. Maciej has built AI-based vision system onboard satellite mission Intuition-1. He's been active in publishing research papers and scientific conferences and is about to finish his PhD in AI for satellite systems.",
+      title: 'Who we are',
+      closing:
+        'We started Radiant2 because we saw too many companies burned by AI hype. We only take projects we can deliver.',
+      founders: [
+        {
+          name: 'Wojciech Ptasiński',
+          role: 'Co-founder',
+          bio: 'R&D Manager with 7+ years shipping AI in banking and satellite systems. Google Cloud Summit speaker. Published researcher in AI and industrial automation.',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/wojciechptasinski/',
+            website: 'https://wptasinski.com',
+          },
+        },
+        {
+          name: 'Maciej Ziaja',
+          role: 'Co-founder',
+          bio: 'PhD candidate in AI for satellite systems. Built AI-based vision systems for the Intuition-1 satellite mission. Published researcher in aerospace and computer vision.',
+          links: {
+            linkedin: '#',
+          },
+        },
       ],
     },
     footer: {
-      title: 'Contact',
-      text: 'Reach out to us at',
-      textAfterLink: 'or email us at',
-      textAfterEmail:
-        'to discuss how Radiant\u00b2 can help your business leverage AI for automation and innovation.',
+      email: 'radiant2.dev@gmail.com',
+      copyright: '© 2025 Radiant2',
     },
   },
   pl: {
@@ -93,13 +219,134 @@ const translations = {
       language: 'Język',
     },
     nav: {
-      offer: 'Oferta',
+      services: 'Usługi',
       team: 'Zespół',
       contact: 'Kontakt',
     },
     hero: {
       title: 'Przyspiesz rozwój firmy dzięki AI',
       typewriter: ['w automatyzacji biznesu', 'w procesach przemysłowych', 'poprzez warsztaty'],
+    },
+    serviceStatement: {
+      text: 'Dostarczamy warsztaty AI, automatyzacje na zamówienie oraz infrastrukturę on-premise.',
+      cta: 'Umów bezpłatną konsultację',
+    },
+    problem: {
+      title: 'Brzmi znajomo?',
+      painPoints: [
+        'Twój zespół wypróbował ChatGPT... i co dalej?',
+        'Wiesz, że AI jest ważne, ale nie wiesz od czego zacząć',
+        'Rozmawiałeś z konsultantami, którzy mówią tylko buzzwordami',
+        'Martwisz się o prywatność danych przy chmurowych narzędziach AI',
+        'Potrzebujesz ekspertyzy AI, ale nie możesz uzasadnić pełnoetatowego zatrudnienia',
+      ],
+      transition:
+        'Słyszymy to co tydzień od CTO i liderów innowacji. Tak możemy pomóc.',
+    },
+    services: {
+      title: 'Nasze usługi',
+      items: [
+        {
+          title: 'Warsztaty i szkolenia AI',
+          description:
+            'Praktyczne szkolenia dla zespołów technicznych i nietechnicznych. Od pierwszego prompta do umiejętności produkcyjnych.',
+          link: 'Dowiedz się więcej →',
+        },
+        {
+          title: 'Automatyzacje i agenty AI',
+          description:
+            'Niestandardowe systemy AI, które działają. Agenty, workflow, integracje budowane dla Twojego biznesu.',
+          link: 'Dowiedz się więcej →',
+        },
+        {
+          title: 'Infrastruktura AI on-premise',
+          description:
+            'Lokalne LLM-y, systemy RAG, prywatna infrastruktura. Twoje dane nigdy nie opuszczają serwerów.',
+          link: 'Dowiedz się więcej →',
+        },
+      ],
+    },
+    positioning: {
+      title: 'Mamy to już za sobą.',
+      body: 'Szkoliliśmy zespoły, budowaliśmy produkcyjne systemy AI i wdrażaliśmy prywatną infrastrukturę - w branżach, gdzie porażka nie wchodzi w grę.',
+      stats: [
+        {
+          number: '500+',
+          label: 'przeszkolonych osób',
+          subtext: 'Od kadry zarządzającej po deweloperów',
+        },
+        {
+          number: 'Produkcyjne AI',
+          label: 'w regulowanych branżach',
+          subtext: 'Bankowość, aerospace, przemysł',
+        },
+        {
+          number: 'Systemy on-prem',
+          label: 'wdrożone',
+          subtext: 'Dla organizacji dbających o dane',
+        },
+      ],
+    },
+    proof: {
+      title: 'Widziani na dużych scenach',
+      events: [
+        {
+          image: '/gcsummit.png',
+          event: 'GOOGLE CLOUD SUMMIT WARSAW 2024',
+          venue: 'Stadion Narodowy',
+          talkTitle: 'AI-Powered Smart Contracts in Next-Gen Banking',
+          cta: 'Zobacz wydarzenie →',
+          videoUrl: 'https://youtu.be/HZf2PursXBY?si=BHiau_31EFYc_KIE',
+        },
+        {
+          image: '/maciek-konfa.png',
+          event: 'SRIN – EUROPEAN SPACE AGENCY CENTRE FOR EARTH OBSERVATION',
+          venue: 'Frascati (Rzym), Włochy',
+          talkTitle: 'Systemy wizji AI super-rozdzielczości satelitarnej',
+        },
+      ],
+    },
+    process: {
+      title: 'Jak to działa',
+      steps: [
+        {
+          number: '1',
+          title: 'Bezpłatna konsultacja',
+          description: '30 minut. Ty mówisz, my słuchamy. Bez prezentacji, bez presji.',
+        },
+        {
+          number: '2',
+          title: 'Jasna propozycja',
+          description: 'Zakres, timeline, cena. Bez niespodzianek. Wiesz dokładnie co dostajesz.',
+        },
+        {
+          number: '3',
+          title: 'Dostarczamy',
+          description:
+            "Warsztaty, systemy, infrastruktura - z regularnymi update'ami i działającymi wynikami.",
+        },
+        {
+          number: '4',
+          title: 'Ty się rozwijasz',
+          description:
+            'Budujemy kompetencje, nie zależność. Nasz cel: nie potrzebujesz nas na zawsze.',
+        },
+      ],
+    },
+    contact: {
+      title: 'Gotowy żeby zacząć?',
+      subtitle: 'Nie wiesz od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
+      primaryCta: 'Umów bezpłatną rozmowę (30 min)',
+      calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
+      formHeading: 'Wolisz napisać?',
+      form: {
+        name: 'Imię i nazwisko',
+        email: 'Email',
+        company: 'Firma',
+        message: 'W czym możemy pomóc?',
+        submit: 'Wyślij wiadomość',
+      },
+      email: 'Lub bezpośrednio na email: radiant2.dev@gmail.com',
     },
     offer: {
       title: 'Nasza oferta',
@@ -157,24 +404,32 @@ const translations = {
       },
     },
     team: {
-      title: 'Nasz zespół',
-      subtitle:
-        'Jesteśmy specjalistami AI z doświadczeniem w biznesie, zastosowaniach przemysłowych i badaniach. Pracujemy tam, gdzie AI spotyka realne wyzwania, aby dostarczać mierzalny wpływ.',
-      founders: 'Poznaj naszych założycieli',
-      roles: {
-        coFounder: 'Współzałożyciel',
-      },
-      founderBios: [
-        'AI RnD Lead z ponad 7-letnim doświadczeniem w sektorach finansowym i przemysłowym, dostarczający cutting-edge innowacje – wyróżnione wdrożeniami AI dla #1 banku w Europie. Projektuje production-grade systemy AI, agentic apps oraz integracje napędzające automatyzację biznesu. Prelegent Google Cloud Summit Warsaw, prowadzi wyspecjalizowane warsztaty AI dla przedsiębiorstw.',
-        'Specjalista AI z 5+ latami doświadczenia w RnD i badaniach akademickich w frontier domains, m.in. aerospace. Maciej zbudował AI-based vision system na potrzeby misji satelitarnej Intuition-1. Aktywnie publikuje prace naukowe i uczestniczy w konferencjach, a także kończy PhD z AI dla systemów satelitarnych.',
+      title: 'Kim jesteśmy',
+      closing:
+        'Założyliśmy Radiant2, bo widzieliśmy zbyt wiele firm spalonych przez AI hype. Bierzemy tylko projekty, które możemy zrealizować.',
+      founders: [
+        {
+          name: 'Wojciech Ptasiński',
+          role: 'Współzałożyciel',
+          bio: 'R&D Manager z 7+ latami wdrażania AI w bankowości i systemach satelitarnych. Prelegent Google Cloud Summit. Publikujący badacz w dziedzinie AI i automatyki przemysłowej.',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/wojciechptasinski/',
+            website: 'https://wptasinski.com',
+          },
+        },
+        {
+          name: 'Maciej Ziaja',
+          role: 'Współzałożyciel',
+          bio: 'Doktorant z zakresu AI dla systemów satelitarnych. Zbudował systemy wizji AI dla misji satelitarnej Intuition-1. Publikujący badacz w dziedzinie aerospace i computer vision.',
+          links: {
+            linkedin: '#',
+          },
+        },
       ],
     },
     footer: {
-      title: 'Kontakt',
-      text: 'Skontaktuj się z nami przez',
-      textAfterLink: 'lub napisz do nas na',
-      textAfterEmail:
-        'i porozmawiajmy o tym, jak Radiant\u00b2 może pomóc Twojemu biznesowi wykorzystać AI do automatyzacji i innowacji.',
+      email: 'radiant2.dev@gmail.com',
+      copyright: '© 2025 Radiant2',
     },
   },
 };

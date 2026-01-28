@@ -1,0 +1,553 @@
+import { useEffect, useState } from 'react';
+import Typewriter from 'typewriter-effect';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import translations from './content/i18n';
+
+function Header({ content, language, onLanguageChange }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navLinks = [
+    { href: '#services', label: content.nav.services },
+    { href: '#team', label: content.nav.team },
+    { href: '#contact', label: content.nav.contact },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 border-b border-slate-200 transition ${
+        isScrolled ? 'bg-white/80 backdrop-blur-2xl' : 'bg-white'
+      }`}
+    >
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:h-16 sm:flex-nowrap sm:gap-6 sm:px-6 sm:py-0">
+        <span className="flex-shrink-0 text-lg font-semibold tracking-wide">
+          Radiant<sup>2</sup>
+        </span>
+        <nav
+          className="order-3 flex w-full flex-wrap items-center gap-2 text-sm font-normal text-slate-700 sm:order-none sm:ml-auto sm:w-auto sm:flex-nowrap sm:gap-4"
+          aria-label="Primary"
+        >
+          {navLinks.map((link, index) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`px-2 py-1 text-xs transition hover:text-slate-900 sm:py-1.5 sm:text-sm ${
+                index === 0 ? 'pl-0 sm:pl-2' : ''
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <span className="hidden h-5 w-[1.5px] bg-slate-500 sm:block" aria-hidden="true" />
+        <div
+          className="order-2 ml-auto flex items-center gap-1 text-xs font-semibold text-slate-700 sm:order-none sm:ml-0"
+          role="group"
+          aria-label={content.labels.language}
+        >
+          <button
+            type="button"
+            onClick={() => onLanguageChange('en')}
+            className={`rounded-full px-3 py-1 transition ${
+              language === 'en'
+                ? 'text-slate-900 underline decoration-[0.5px] decoration-slate-700 underline-offset-4'
+                : 'text-slate-500 hover:text-slate-900'
+            }`}
+            aria-pressed={language === 'en'}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            onClick={() => onLanguageChange('pl')}
+            className={`rounded-full px-3 py-1 transition ${
+              language === 'pl'
+                ? 'text-slate-900 underline decoration-[0.5px] decoration-slate-700 underline-offset-4'
+                : 'text-slate-500 hover:text-slate-900'
+            }`}
+            aria-pressed={language === 'pl'}
+          >
+            PL
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function HeroSection({ content, language }) {
+  return (
+    <section
+      id="home"
+      className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20"
+    >
+      <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
+      <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+        <h2 className="text-5xl font-semibold sm:text-6xl">
+          Radiant<sup>2</sup>
+        </h2>
+        <h3
+          className="text-3xl font-mono"
+          style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+        >
+          {content.hero.title}{' '}
+          <Typewriter
+            key={language}
+            options={{
+              strings: content.hero.typewriter,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h3>
+      </div>
+    </section>
+  );
+}
+
+function ServiceStatement({ content, openCalendly }) {
+  return (
+    <section className="border-b border-slate-100 bg-white py-12 sm:py-16">
+      <div className="mx-auto max-w-3xl space-y-6 px-6 text-center">
+        <p className="text-base leading-relaxed text-slate-600">
+          {content.serviceStatement.text}
+        </p>
+        <button
+          onClick={() => openCalendly(content.contact.calendlyUrl)}
+          className="inline-block border border-slate-900 px-6 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-slate-900 hover:text-white"
+        >
+          {content.serviceStatement.cta}
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function ProblemSection({ content }) {
+  return (
+    <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-3xl space-y-10 px-6">
+        <h2 className="text-3xl font-semibold sm:text-4xl">{content.problem.title}</h2>
+        <ul className="space-y-4 text-slate-600">
+          {content.problem.painPoints.map((point, index) => (
+            <li key={index} className="flex items-start gap-3 leading-relaxed">
+              <span className="mt-1.5 flex-shrink-0 text-xs text-slate-300">—</span>
+              <span className="text-base">{point}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="border-t border-slate-200 pt-8 text-base font-medium text-slate-900">{content.problem.transition}</p>
+      </div>
+    </section>
+  );
+}
+
+function ServicesSection({ content, openCalendly }) {
+  return (
+    <section id="services" className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-5xl space-y-12 px-6">
+        <div className="grid gap-16 sm:grid-cols-3">
+          {content.services.items.map((service, index) => (
+            <div key={index} className="space-y-4">
+              <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
+              <p className="leading-relaxed text-slate-600">{service.description}</p>
+              <button
+                onClick={() => openCalendly(content.contact.calendlyUrl)}
+                className="inline-block text-sm font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+              >
+                {service.link}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PositioningSection({ content }) {
+  return (
+    <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl space-y-12 px-6">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-semibold sm:text-4xl">{content.positioning.title}</h2>
+          <p className="text-base leading-relaxed text-slate-600">{content.positioning.body}</p>
+        </div>
+        <div className="grid gap-12 border-t border-slate-200 pt-12 sm:grid-cols-3">
+          {content.positioning.stats.map((stat, index) => (
+            <div key={index} className="space-y-2 text-center">
+              <p className="text-2xl font-bold text-slate-900 sm:text-3xl">{stat.number}</p>
+              <p className="text-xs uppercase tracking-wider text-slate-500">{stat.label}</p>
+              <p className="pt-1 text-xs leading-relaxed text-slate-500">{stat.subtext}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProofSection({ content }) {
+  return (
+    <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-5xl space-y-12 px-6">
+        <h2 className="text-3xl font-semibold sm:text-4xl">{content.proof.title}</h2>
+        <div className="grid gap-12 sm:grid-cols-2">
+          {content.proof.events.map((event, index) => (
+            <div key={index} className="space-y-6">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <img
+                  src={event.image}
+                  alt={`${event.event} - ${event.talkTitle}`}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">{event.event}</p>
+                <p className="text-sm text-slate-600">{event.venue}</p>
+                <p className="text-base font-medium text-slate-900">{event.talkTitle}</p>
+                {event.videoUrl && (
+                  <a
+                    href={event.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block pt-2 text-sm font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+                  >
+                    {event.cta}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProcessSection({ content }) {
+  return (
+    <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-5xl space-y-16 px-6">
+        <h2 className="text-3xl font-semibold sm:text-4xl">{content.process.title}</h2>
+
+        {/* Desktop: Horizontal with connecting line */}
+        <div className="hidden lg:block">
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="absolute left-0 right-0 top-[30px] mx-auto h-[2px] w-[calc(100%-120px)] bg-slate-200" style={{ marginLeft: '60px', marginRight: '60px' }}></div>
+
+            <div className="relative grid grid-cols-4 gap-8">
+              {content.process.steps.map((step, index) => (
+                <div key={index} className="space-y-6">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-[60px] w-[60px] items-center justify-center bg-white text-3xl font-bold text-slate-900">
+                      0{step.number}
+                    </div>
+                  </div>
+                  <div className="space-y-3 text-center">
+                    <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Tablet: 2 columns */}
+        <div className="hidden sm:grid lg:hidden grid-cols-2 gap-12">
+          {content.process.steps.map((step, index) => (
+            <div key={index} className="flex gap-6">
+              <div className="flex-shrink-0">
+                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-slate-900 text-2xl font-bold text-slate-900">
+                  0{step.number}
+                </div>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Vertical timeline */}
+        <div className="sm:hidden space-y-8">
+          {content.process.steps.map((step, index) => (
+            <div key={index} className="relative flex gap-6">
+              {/* Timeline line */}
+              {index < content.process.steps.length - 1 && (
+                <div className="absolute left-[24px] top-[50px] h-[calc(100%+2rem)] w-[2px] bg-slate-200"></div>
+              )}
+
+              <div className="relative flex-shrink-0">
+                <div className="flex h-[50px] w-[50px] items-center justify-center border-2 border-slate-900 bg-white text-2xl font-bold text-slate-900">
+                  0{step.number}
+                </div>
+              </div>
+              <div className="space-y-3 pb-4">
+                <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactSection({ content, openCalendly }) {
+  return (
+    <section id="contact" className="border-t border-slate-200 bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-2xl space-y-16 px-6">
+        <div className="space-y-4 text-center">
+          <h2 className="text-3xl font-semibold sm:text-4xl">{content.contact.title}</h2>
+          <p className="text-base text-slate-600">{content.contact.subtitle}</p>
+        </div>
+
+        {/* Primary CTA - Calendly Button */}
+        <div className="flex justify-center">
+          <button
+            onClick={() => openCalendly(content.contact.calendlyUrl)}
+            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+          >
+            {content.contact.primaryCta}
+          </button>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-slate-200"></div>
+
+        {/* Secondary Option - Form */}
+        <div className="space-y-8">
+          <h3 className="text-center text-sm font-medium text-slate-500">{content.contact.formHeading}</h3>
+
+          <form className="mx-auto max-w-md space-y-5">
+            <div>
+              <label htmlFor="name" className="block text-xs font-medium text-slate-500">
+                {content.contact.form.name} *
+              </label>
+              <input
+                type="text"
+                id="name"
+                required
+                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-slate-900 focus:outline-none focus:ring-0"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-xs font-medium text-slate-500">
+                {content.contact.form.email} *
+              </label>
+              <input
+                type="email"
+                id="email"
+                required
+                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-slate-900 focus:outline-none focus:ring-0"
+              />
+            </div>
+            <div>
+              <label htmlFor="company" className="block text-xs font-medium text-slate-500">
+                {content.contact.form.company}
+              </label>
+              <input
+                type="text"
+                id="company"
+                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-slate-900 focus:outline-none focus:ring-0"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-xs font-medium text-slate-500">
+                {content.contact.form.message} *
+              </label>
+              <textarea
+                id="message"
+                required
+                rows="4"
+                className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm focus:border-slate-900 focus:outline-none focus:ring-0"
+              />
+            </div>
+            <button
+              type="submit"
+              className="mt-8 w-full border border-slate-900 bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-slate-900"
+            >
+              {content.contact.form.submit}
+            </button>
+          </form>
+        </div>
+
+        <p className="border-t border-slate-200 pt-8 text-center text-sm text-slate-500">{content.contact.email}</p>
+      </div>
+    </section>
+  );
+}
+
+function TeamSection({ content }) {
+  const founderPhotos = {
+    'Wojciech Ptasiński': '/wojtek.png',
+    'Maciej Ziaja': null, // No photo yet
+  };
+
+  return (
+    <section id="team" className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl space-y-16 px-6">
+        <h2 className="text-3xl font-semibold sm:text-4xl">{content.team.title}</h2>
+        <div className="grid gap-16 sm:grid-cols-2">
+          {content.team.founders.map((founder, index) => (
+            <div key={index} className="space-y-6">
+              <div className="aspect-square w-full max-w-[240px] overflow-hidden bg-slate-100">
+                {founderPhotos[founder.name] ? (
+                  <img
+                    src={founderPhotos[founder.name]}
+                    alt={`${founder.name} - ${founder.role}`}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-xs text-slate-400">
+                    [Photo]
+                  </div>
+                )}
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900">{founder.name}</h3>
+                  <p className="text-xs uppercase tracking-wider text-slate-500">{founder.role}</p>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-600">{founder.bio}</p>
+                <div className="flex gap-4 pt-2">
+                  {founder.links.linkedin && (
+                    <a
+                      href={founder.links.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                  {founder.links.website && (
+                    <a
+                      href={founder.links.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-medium text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+                    >
+                      {founder.links.website.replace('https://', '')}
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="border-t border-slate-200 pt-12">
+          <blockquote className="border-l-2 border-slate-300 pl-6 text-base italic leading-relaxed text-slate-700">
+            "{content.team.closing}"
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer({ content }) {
+  return (
+    <footer className="border-t border-slate-200 bg-white">
+      <div className="mx-auto max-w-5xl px-6 py-16 text-center">
+        <p className="text-sm">
+          <a href={`mailto:${content.footer.email}`} className="text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700">
+            {content.footer.email}
+          </a>
+        </p>
+        <p className="pt-4 text-xs text-slate-400">{content.footer.copyright}</p>
+      </div>
+    </footer>
+  );
+}
+
+function App() {
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = window.localStorage.getItem('language');
+    if (savedLanguage && translations[savedLanguage]) {
+      return savedLanguage;
+    }
+
+    if (window.navigator.language?.toLowerCase().startsWith('pl')) {
+      return 'pl';
+    }
+
+    return 'en';
+  });
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
+  const content = translations[language] ?? translations.en;
+
+  const handleLanguageChange = nextLanguage => {
+    setLanguage(nextLanguage);
+    window.localStorage.setItem('language', nextLanguage);
+  };
+
+  // Load Calendly widget script for popup
+  useEffect(() => {
+    // Check if already loaded
+    if (window.Calendly) {
+      setCalendlyLoaded(true);
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.onload = () => {
+      setCalendlyLoaded(true);
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
+  const openCalendly = (url) => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <Header content={content} language={language} onLanguageChange={handleLanguageChange} />
+      <HeroSection content={content} language={language} />
+      <main>
+        <ProblemSection content={content} />
+        <ServicesSection content={content} openCalendly={openCalendly} />
+        <PositioningSection content={content} />
+        <ProofSection content={content} />
+        <ProcessSection content={content} />
+        <TeamSection content={content} />
+        <ServiceStatement content={content} openCalendly={openCalendly} />
+        <ContactSection content={content} openCalendly={openCalendly} />
+      </main>
+      <Footer content={content} />
+    </div>
+  );
+}
+
+export default App;
