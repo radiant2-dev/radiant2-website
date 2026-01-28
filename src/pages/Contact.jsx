@@ -46,7 +46,10 @@ export default function Contact({ content, language }) {
 
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-xs font-medium text-slate-500 text-center">
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
                   {content.contact.form.name} *
                 </label>
                 <input
@@ -57,7 +60,10 @@ export default function Contact({ content, language }) {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-xs font-medium text-slate-500 text-center">
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
                   {content.contact.form.email} *
                 </label>
                 <input
@@ -68,7 +74,10 @@ export default function Contact({ content, language }) {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-xs font-medium text-slate-500 text-center">
+                <label
+                  htmlFor="company"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
                   {content.contact.form.company}
                 </label>
                 <input
@@ -78,7 +87,10 @@ export default function Contact({ content, language }) {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-xs font-medium text-slate-500 text-center">
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-medium text-slate-500 text-center"
+                >
                   {content.contact.form.message} *
                 </label>
                 <textarea
