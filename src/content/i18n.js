@@ -5,7 +5,7 @@ const translations = {
     },
     nav: {
       services: 'Services',
-      team: 'Team',
+      about: 'About',
       contact: 'Contact',
     },
     hero: {
@@ -119,7 +119,9 @@ const translations = {
     },
     contact: {
       title: 'Ready to start?',
-      subtitle: "Not sure where to begin? Most of our clients weren't either. Let's talk.",
+      subtitle: "Not sure where to begin? Most of our clients weren't either.",
+      typewriterPrefix: "Let's talk about",
+      typewriter: ['workshops', 'on-premise AI', 'your project', 'AI agents', 'automation', 'custom solutions', 'AI strategy'],
       primaryCta: 'Book a free 30-min call',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Prefer to write?',
@@ -214,7 +216,8 @@ const translations = {
     projects: {
       hero: {
         title: 'Custom AI built for your business',
-        subtitle: 'End-to-end AI development. From proof of concept to production-ready systems.',
+        subtitle: 'End-to-end AI development',
+        typewriter: ['that scales', 'that works in production', 'built for your industry', 'from POC to deployment'],
         cta: 'Discuss your project',
       },
       whatWeBuild: {
@@ -270,7 +273,8 @@ const translations = {
     workshops: {
       hero: {
         title: 'AI training that actually sticks',
-        subtitle: 'Hands-on workshops for technical and non-technical teams',
+        subtitle: 'Hands-on workshops for',
+        typewriter: ['developers', 'executives', 'accountants', 'lawyers', 'everyone'],
         cta: 'Book a call',
       },
       whoItsFor: {
@@ -362,13 +366,38 @@ const translations = {
       },
       whyUs: {
         title: 'Why us',
-        stats: ['500+ trained', 'Practitioners, not theorists', 'Real projects, not demos'],
+        body: 'We deliver training that works. Real expertise, real examples, real results.',
+        stats: [
+          {
+            number: '500+',
+            label: 'people trained',
+            subtext: 'From executives to developers',
+          },
+          {
+            number: 'Practitioners',
+            label: 'not theorists',
+            subtext: 'Teaching what we build in production',
+          },
+          {
+            number: 'Real projects',
+            label: 'not toy examples',
+            subtext: 'Training based on actual use cases',
+          },
+        ],
       },
       cta: {
         title: 'Ready to train your team?',
         subtitle:
           "Book a call to discuss your training needs. We'll design the right program for you.",
         button: 'Book a call',
+      },
+    },
+    onPrem: {
+      hero: {
+        title: 'AI on your infrastructure',
+        subtitle: 'Private AI systems',
+        typewriter: ['for sensitive data', 'with full control', 'behind your firewall', 'air-gapped deployments'],
+        cta: 'Discuss your setup',
       },
     },
     footer: {
@@ -382,7 +411,7 @@ const translations = {
     },
     nav: {
       services: 'Usługi',
-      team: 'Zespół',
+      about: 'O nas',
       contact: 'Kontakt',
     },
     hero: {
@@ -495,8 +524,9 @@ const translations = {
     },
     contact: {
       title: 'Gotowy do startu?',
-      subtitle:
-        'Nie wiesz, od czego zacząć? Większość naszych klientów też nie wiedziała. Porozmawiajmy.',
+      subtitle: 'Nie wiesz, od czego zacząć? Większość naszych klientów też nie wiedziała.',
+      typewriterPrefix: 'Porozmawiajmy o',
+      typewriter: ['warsztatach', 'AI on-premise', 'Twoim projekcie', 'agentach AI', 'automatyzacji', 'rozwiązaniach na zamówienie', 'strategii AI'],
       primaryCta: 'Umów pierwszą rozmowę (30 min)',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Wolisz napisać?',
@@ -591,7 +621,8 @@ const translations = {
     projects: {
       hero: {
         title: 'AI szyte pod Twój biznes',
-        subtitle: 'Od pomysłu do produkcji. Kompleksowe rozwiązania AI.',
+        subtitle: 'Kompleksowe rozwiązania AI',
+        typewriter: ['które skalują się', 'gotowe na produkcję', 'szyte pod Twoją branżę', 'od POC do wdrożenia'],
         cta: 'Porozmawiajmy',
       },
       whatWeBuild: {
@@ -650,7 +681,8 @@ const translations = {
     workshops: {
       hero: {
         title: 'Warsztaty AI, które naprawdę zostają',
-        subtitle: 'Praktyczne szkolenia dla zespołów technicznych i nietechnicznych',
+        subtitle: 'Praktyczne szkolenia dla',
+        typewriter: ['programistów', 'zarządu', 'księgowych', 'prawników', 'każdego'],
         cta: 'Umów rozmowę',
       },
       whoItsFor: {
@@ -745,13 +777,38 @@ const translations = {
       },
       whyUs: {
         title: 'Dlaczego my',
-        stats: ['500+ PRZESZKOLONYCH', 'PRAKTYCY, NIE TEORETYCY', 'PRAWDZIWE PROJEKTY, NIE DEMO'],
+        body: 'Prowadzimy szkolenia, które działają. Prawdziwa wiedza, prawdziwe przykłady, prawdziwe rezultaty.',
+        stats: [
+          {
+            number: '500+',
+            label: 'przeszkolonych',
+            subtext: 'Od zarządu po programistów',
+          },
+          {
+            number: 'Praktycy',
+            label: 'nie teoretycy',
+            subtext: 'Uczymy tego, co budujemy w produkcji',
+          },
+          {
+            number: 'Prawdziwe projekty',
+            label: 'nie demo',
+            subtext: 'Szkolenia oparte na realnych przypadkach',
+          },
+        ],
       },
       cta: {
         title: 'Zaprojektujmy Twój warsztat',
         subtitle: 'Opowiedz o zespole. Dobierzemy moduły i format.',
         button: 'Umów rozmowę',
         footer: 'Lub mailowo: hello@radiant2.dev',
+      },
+    },
+    onPrem: {
+      hero: {
+        title: 'AI na Twojej infrastrukturze',
+        subtitle: 'Prywatne systemy AI',
+        typewriter: ['dla wrażliwych danych', 'z pełną kontrolą', 'za twoim firewallem', 'systemy izolowane'],
+        cta: 'Porozmawiajmy o setupie',
       },
     },
     footer: {

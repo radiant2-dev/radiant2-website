@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, TrendingDown, Zap, Settings, ServerOff, Unlock } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
 
-export default function OnPrem() {
+export default function OnPrem({ content, language }) {
   useEffect(() => {
     document.title = 'On-Premise AI Solutions | Radiant2';
   }, []);
@@ -10,19 +11,27 @@ export default function OnPrem() {
   return (
     <main>
       {/* HERO SECTION */}
-      <section className="relative flex min-h-[520px] items-center bg-[url('/hero_background.jpg')] bg-cover bg-center">
+      <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
-        <div className="relative mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
-          <h1 className="text-4xl font-semibold sm:text-5xl">AI that stays on your servers</h1>
-          <p className="text-lg text-slate-900">
-            Deploy powerful AI models behind your firewall. Full control, zero cloud dependency.
-          </p>
+        <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-5xl font-semibold sm:text-6xl">{content.onPrem.hero.title}</h2>
+          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+            {content.onPrem.hero.subtitle}{' '}
+            <Typewriter
+              key={language}
+              options={{
+                strings: content.onPrem.hero.typewriter,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h3>
           <div className="pt-4">
             <Link
               to="/contact"
-              className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700"
+              className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700"
             >
-              Discuss your setup
+              {content.onPrem.hero.cta}
             </Link>
           </div>
         </div>
@@ -92,34 +101,34 @@ export default function OnPrem() {
       </section>
 
       {/* USE CASES SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Common use cases</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">Common use cases</h2>
           <div className="grid gap-8 sm:grid-cols-2">
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-900">Healthcare & Finance</h3>
-              <p className="text-sm text-slate-600">
+              <h3 className="text-lg font-semibold text-white">Healthcare & Finance</h3>
+              <p className="text-sm text-neutral-300">
                 Process sensitive patient or customer data without cloud exposure
               </p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-900">Government & Defense</h3>
-              <p className="text-sm text-slate-600">
+              <h3 className="text-lg font-semibold text-white">Government & Defense</h3>
+              <p className="text-sm text-neutral-300">
                 Air-gapped deployments for classified or restricted environments
               </p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-900">Manufacturing</h3>
-              <p className="text-sm text-slate-600">
+              <h3 className="text-lg font-semibold text-white">Manufacturing</h3>
+              <p className="text-sm text-neutral-300">
                 Real-time quality control and process optimization on factory floor
               </p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-900">Research Institutions</h3>
-              <p className="text-sm text-slate-600">
+              <h3 className="text-lg font-semibold text-white">Research Institutions</h3>
+              <p className="text-sm text-neutral-300">
                 Custom models on proprietary datasets with full IP protection
               </p>
             </div>
@@ -212,7 +221,7 @@ export default function OnPrem() {
           </div>
           <Link
             to="/contact"
-            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+            className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
             Schedule a consultation
           </Link>

@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 
-export default function Projects({ content }) {
+export default function Projects({ content, language }) {
   useEffect(() => {
     document.title = 'Custom AI Projects | Radiant2';
   }, []);
@@ -9,15 +10,25 @@ export default function Projects({ content }) {
   return (
     <main>
       {/* HERO SECTION */}
-      <section className="relative flex min-h-[520px] items-center bg-[url('/hero_background.jpg')] bg-cover bg-center">
+      <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
-        <div className="relative mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
-          <h1 className="text-4xl font-semibold sm:text-5xl">{content.projects.hero.title}</h1>
-          <p className="text-lg text-slate-900">{content.projects.hero.subtitle}</p>
+        <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-5xl font-semibold sm:text-6xl">{content.projects.hero.title}</h2>
+          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+            {content.projects.hero.subtitle}{' '}
+            <Typewriter
+              key={language}
+              options={{
+                strings: content.projects.hero.typewriter,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h3>
           <div className="pt-4">
             <Link
               to="/contact"
-              className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700"
+              className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700"
             >
               {content.projects.hero.cta}
             </Link>
@@ -43,18 +54,18 @@ export default function Projects({ content }) {
       </section>
 
       {/* HOW WE WORK SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">{content.projects.howWeWork.title}</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.projects.howWeWork.title}</h2>
 
           <div className="space-y-12">
             {content.projects.howWeWork.steps.map((step, index) => (
-              <div key={index} className="grid gap-8 border-t border-slate-200 pt-8 sm:grid-cols-3">
+              <div key={index} className="grid gap-8 border-t border-neutral-700 pt-8 sm:grid-cols-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">{step.title}</h3>
                 </div>
                 <div className="sm:col-span-2">
-                  <p className="text-sm text-slate-600">{step.description}</p>
+                  <p className="text-sm text-neutral-300">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -79,9 +90,9 @@ export default function Projects({ content }) {
       </section>
 
       {/* INDUSTRIES SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="text-lg text-slate-600">{content.projects.industries.text}</p>
+          <p className="text-lg text-neutral-300">{content.projects.industries.text}</p>
         </div>
       </section>
 
@@ -91,7 +102,7 @@ export default function Projects({ content }) {
           <h2 className="text-3xl font-semibold sm:text-4xl">{content.projects.cta.title}</h2>
           <Link
             to="/contact"
-            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+            className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
             {content.projects.cta.button}
           </Link>

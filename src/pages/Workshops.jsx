@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 
-export default function Workshops({ content }) {
+export default function Workshops({ content, language }) {
   useEffect(() => {
     document.title = 'AI Workshops & Training | Radiant2';
   }, []);
@@ -9,15 +10,25 @@ export default function Workshops({ content }) {
   return (
     <main>
       {/* HERO SECTION */}
-      <section className="relative flex min-h-[520px] items-center bg-[url('/hero_background.jpg')] bg-cover bg-center">
+      <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
-        <div className="relative mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
-          <h1 className="text-4xl font-semibold sm:text-5xl">{content.workshops.hero.title}</h1>
-          <p className="text-lg text-slate-900">{content.workshops.hero.subtitle}</p>
+        <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
+          <h2 className="text-5xl font-semibold sm:text-6xl">{content.workshops.hero.title}</h2>
+          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+            {content.workshops.hero.subtitle}{' '}
+            <Typewriter
+              key={language}
+              options={{
+                strings: content.workshops.hero.typewriter,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h3>
           <div className="pt-4">
             <Link
               to="/contact"
-              className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700"
+              className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700"
             >
               {content.workshops.hero.cta}
             </Link>
@@ -38,6 +49,64 @@ export default function Workshops({ content }) {
                 <p className="text-slate-600">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FORMATS SECTION */}
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
+        <div className="mx-auto max-w-5xl space-y-12 px-6">
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.workshops.formats.title}</h2>
+          <div className="grid gap-12 sm:grid-cols-3">
+            {content.workshops.formats.items.map((format, index) => {
+              // Icon rendering logic based on format index
+              const renderIcon = () => {
+                if (index === 0) {
+                  // Half-day icon: single rectangle with mixed borders
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div
+                        className="w-10 h-10"
+                        style={{
+                          borderTop: '2px dashed white',
+                          borderRight: '2px dashed white',
+                          borderBottom: '2px solid white',
+                          borderLeft: '2px solid white',
+                        }}
+                      ></div>
+                    </div>
+                  );
+                } else if (index === 1) {
+                  // Full-day icon: single rectangle with all solid borders
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div className="w-10 h-10 border-2 border-solid border-white"></div>
+                    </div>
+                  );
+                } else if (index === 2) {
+                  // Multi-day icon: three rectangles
+                  return (
+                    <div className="flex justify-start mb-5">
+                      <div className="flex gap-2">
+                        <div className="w-10 h-10 border-2 border-solid border-white"></div>
+                        <div className="w-10 h-10 border-2 border-dashed border-white"></div>
+                        <div className="w-10 h-10 border-2 border-dashed border-white"></div>
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
+              };
+
+              return (
+                <div key={index} className="space-y-3">
+                  {renderIcon()}
+                  <h3 className="text-xl font-semibold text-white">{format.title}</h3>
+                  <p className="text-sm font-medium text-neutral-400">{format.duration}</p>
+                  <p className="text-sm leading-relaxed text-neutral-300">{format.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -68,72 +137,19 @@ export default function Workshops({ content }) {
         </div>
       </section>
 
-      {/* FORMATS SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">{content.workshops.formats.title}</h2>
-          <div className="grid gap-12 sm:grid-cols-3">
-            {content.workshops.formats.items.map((format, index) => {
-              // Icon rendering logic based on format index
-              const renderIcon = () => {
-                if (index === 0) {
-                  // Half-day icon: single rectangle with mixed borders
-                  return (
-                    <div className="flex justify-center mb-5">
-                      <div
-                        className="w-10 h-10"
-                        style={{
-                          borderTop: '2px dashed currentColor',
-                          borderRight: '2px dashed currentColor',
-                          borderBottom: '2px solid currentColor',
-                          borderLeft: '2px solid currentColor',
-                        }}
-                      ></div>
-                    </div>
-                  );
-                } else if (index === 1) {
-                  // Full-day icon: single rectangle with all solid borders
-                  return (
-                    <div className="flex justify-center mb-5">
-                      <div className="w-10 h-10 border-2 border-solid border-current"></div>
-                    </div>
-                  );
-                } else if (index === 2) {
-                  // Multi-day icon: three rectangles
-                  return (
-                    <div className="flex justify-center mb-5">
-                      <div className="flex gap-2">
-                        <div className="w-10 h-10 border-2 border-solid border-current"></div>
-                        <div className="w-10 h-10 border-2 border-dashed border-current"></div>
-                        <div className="w-10 h-10 border-2 border-dashed border-current"></div>
-                      </div>
-                    </div>
-                  );
-                }
-                return null;
-              };
-
-              return (
-                <div key={index} className="space-y-3">
-                  {renderIcon()}
-                  <h3 className="text-xl font-semibold text-slate-900">{format.title}</h3>
-                  <p className="text-sm font-medium text-slate-500">{format.duration}</p>
-                  <p className="text-sm leading-relaxed text-slate-600">{format.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* WHY US SECTION */}
-      <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold sm:text-4xl">{content.workshops.whyUs.title}</h2>
-          <div className="grid gap-12 border-t border-slate-200 pt-12 sm:grid-cols-3">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.workshops.whyUs.title}</h2>
+            <p className="text-base leading-relaxed text-neutral-300">{content.workshops.whyUs.body}</p>
+          </div>
+          <div className="grid gap-12 border-t border-neutral-700 pt-12 sm:grid-cols-3">
             {content.workshops.whyUs.stats.map((stat, index) => (
               <div key={index} className="space-y-2 text-center">
-                <p className="text-xl font-bold text-slate-900">{stat}</p>
+                <p className="text-2xl font-bold text-white sm:text-3xl">{stat.number}</p>
+                <p className="text-xs uppercase tracking-wider text-neutral-400">{stat.label}</p>
+                <p className="pt-1 text-xs leading-relaxed text-neutral-400">{stat.subtext}</p>
               </div>
             ))}
           </div>
@@ -149,7 +165,7 @@ export default function Workshops({ content }) {
           </div>
           <Link
             to="/contact"
-            className="inline-block bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-700 sm:px-12 sm:py-5 sm:text-lg"
+            className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
             {content.workshops.cta.button}
           </Link>

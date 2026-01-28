@@ -6,6 +6,17 @@ import Workshops from './pages/Workshops';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import OnPrem from './pages/OnPrem';
+import About from './pages/About';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function Header({ content, language, onLanguageChange }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,8 +26,7 @@ function Header({ content, language, onLanguageChange }) {
     { to: '/workshops', label: 'Workshops' },
     { to: '/projects', label: 'Projects' },
     { to: '/on-prem', label: 'On-Prem' },
-    { to: '/#services', label: content.nav.services, hash: true },
-    { to: '/#team', label: content.nav.team, hash: true },
+    { to: '/about', label: content.nav.about },
     { to: '/contact', label: content.nav.contact },
   ];
 
@@ -111,17 +121,17 @@ function Header({ content, language, onLanguageChange }) {
 
 function Footer({ content }) {
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-neutral-700 bg-neutral-900">
       <div className="mx-auto max-w-5xl px-6 py-16 text-center">
         <p className="text-sm">
           <a
             href={`mailto:${content.footer.email}`}
-            className="text-slate-900 underline decoration-[0.5px] underline-offset-4 hover:text-slate-700"
+            className="text-white underline decoration-[0.5px] underline-offset-4 hover:text-neutral-300"
           >
             {content.footer.email}
           </a>
         </p>
-        <p className="pt-4 text-xs text-slate-400">{content.footer.copyright}</p>
+        <p className="pt-4 text-xs text-neutral-400">{content.footer.copyright}</p>
       </div>
     </footer>
   );
@@ -140,7 +150,6 @@ function App() {
 
     return 'en';
   });
-  const [calendlyLoaded, setCalendlyLoaded] = useState(() => !!window.Calendly);
   const content = translations[language] ?? translations.en;
 
   const handleLanguageChange = nextLanguage => {
@@ -148,41 +157,17 @@ function App() {
     window.localStorage.setItem('language', nextLanguage);
   };
 
-  // Load Calendly widget script for popup
-  useEffect(() => {
-    // Skip if already loaded
-    if (window.Calendly) {
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => {
-      setCalendlyLoaded(true);
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      <ScrollToTop />
       <Header content={content} language={language} onLanguageChange={handleLanguageChange} />
 
       <Routes>
-        <Route path="/workshops" element={<Workshops content={content} />} />
-        <Route path="/projects" element={<Projects content={content} />} />
-        <Route path="/on-prem" element={<OnPrem />} />
-        <Route
-          path="/contact"
-          element={<Contact content={content} calendlyLoaded={calendlyLoaded} />}
-        />
+        <Route path="/workshops" element={<Workshops content={content} language={language} />} />
+        <Route path="/projects" element={<Projects content={content} language={language} />} />
+        <Route path="/on-prem" element={<OnPrem content={content} language={language} />} />
+        <Route path="/about" element={<About content={content} language={language} />} />
+        <Route path="/contact" element={<Contact content={content} language={language} />} />
         <Route path="/" element={<Home content={content} language={language} />} />
       </Routes>
 
