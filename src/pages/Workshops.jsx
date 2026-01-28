@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Workshops({ content }) {
+export default function Workshops() {
   useEffect(() => {
     document.title = 'AI Workshops & Training | Radiant2';
   }, []);

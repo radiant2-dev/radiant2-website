@@ -10,7 +10,6 @@ import OnPrem from './pages/OnPrem';
 function Header({ content, language, onLanguageChange }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   const navLinks = [
     { to: '/workshops', label: 'Workshops' },
@@ -136,7 +135,7 @@ function App() {
 
     return 'en';
   });
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
+  const [calendlyLoaded, setCalendlyLoaded] = useState(() => !!window.Calendly);
   const content = translations[language] ?? translations.en;
 
   const handleLanguageChange = nextLanguage => {
@@ -146,9 +145,8 @@ function App() {
 
   // Load Calendly widget script for popup
   useEffect(() => {
-    // Check if already loaded
+    // Skip if already loaded
     if (window.Calendly) {
-      setCalendlyLoaded(true);
       return;
     }
 
@@ -168,20 +166,15 @@ function App() {
     };
   }, []);
 
-  const openCalendly = (url) => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Header content={content} language={language} onLanguageChange={handleLanguageChange} />
 
       <Routes>
-        <Route path="/workshops" element={<Workshops content={content} />} />
-        <Route path="/projects" element={<Projects content={content} />} />
-        <Route path="/on-prem" element={<OnPrem content={content} />} />
+        <Route path="/workshops" element={<Workshops />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/on-prem" element={<OnPrem />} />
         <Route path="/contact" element={<Contact content={content} calendlyLoaded={calendlyLoaded} />} />
         <Route path="/" element={<Home content={content} language={language} />} />
       </Routes>

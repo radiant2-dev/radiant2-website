@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Projects({ content }) {
+export default function Projects() {
   useEffect(() => {
     document.title = 'Custom AI Projects | Radiant2';
   }, []);

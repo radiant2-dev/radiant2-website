@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, TrendingDown, Zap, Settings, ServerOff, Unlock } from 'lucide-react';
 
-export default function OnPrem({ content }) {
+export default function OnPrem() {
   useEffect(() => {
     document.title = 'On-Premise AI Solutions | Radiant2';
   }, []);
