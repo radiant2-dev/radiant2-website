@@ -149,7 +149,7 @@ function ProcessSection({ content }) {
           <div className="relative">
             {/* Connecting line */}
             <div
-              className="absolute left-0 right-0 top-[30px] mx-auto h-[2px] w-[calc(100%-120px)] bg-slate-200"
+              className="absolute left-0 right-0 top-[30px] mx-auto h-[2px] w-[calc(100%-120px)] bg-neutral-200"
               style={{ marginLeft: '60px', marginRight: '60px' }}
             ></div>
 
@@ -157,12 +157,12 @@ function ProcessSection({ content }) {
               {content.process.steps.map((step, index) => (
                 <div key={index} className="space-y-6">
                   <div className="flex flex-col items-start">
-                    <div className="flex h-[60px] w-[60px] items-center justify-center bg-white text-3xl font-bold text-slate-900">
+                    <div className="flex h-[60px] w-[60px] items-center justify-center border-2 border-neutral-900 bg-white text-3xl font-bold text-neutral-900">
                       0{step.number}
                     </div>
                   </div>
                   <div className="space-y-3 text-left">
-                    <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                    <h3 className="text-lg font-semibold text-neutral-900">{step.title}</h3>
                     <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
                   </div>
                 </div>

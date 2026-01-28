@@ -39,9 +39,7 @@ export default function Contact({ content, language }) {
       {/* FORM SECTION */}
       <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-2xl space-y-8 px-6">
-          <h2 className="text-2xl font-semibold text-slate-900 text-center">
-            {content.contact.formHeading}
-          </h2>
+          <h2 className="text-2xl font-semibold text-slate-900">{content.contact.formHeading}</h2>
 
           <form className="space-y-6">
             <div>
