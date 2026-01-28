@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function About({ content, language }) {
+export default function About({ content }) {
   const founderPhotos = {
     'Wojciech Ptasiński': '/wojtek.png',
     'Maciej Ziaja': '/maciek.png',
