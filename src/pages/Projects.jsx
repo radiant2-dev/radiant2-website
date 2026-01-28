@@ -14,7 +14,10 @@ export default function Projects({ content, language }) {
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
           <h2 className="text-5xl font-semibold sm:text-6xl">{content.projects.hero.title}</h2>
-          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+          <h3
+            className="text-3xl font-mono"
+            style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+          >
             {content.projects.hero.subtitle}{' '}
             <Typewriter
               key={language}
@@ -56,11 +59,16 @@ export default function Projects({ content, language }) {
       {/* HOW WE WORK SECTION */}
       <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.projects.howWeWork.title}</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            {content.projects.howWeWork.title}
+          </h2>
 
           <div className="space-y-12">
             {content.projects.howWeWork.steps.map((step, index) => (
-              <div key={index} className="grid gap-8 border-t border-neutral-700 pt-8 sm:grid-cols-3">
+              <div
+                key={index}
+                className="grid gap-8 border-t border-neutral-700 pt-8 sm:grid-cols-3"
+              >
                 <div>
                   <h3 className="text-lg font-semibold text-white">{step.title}</h3>
                 </div>

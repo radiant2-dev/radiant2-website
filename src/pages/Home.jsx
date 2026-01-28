@@ -214,12 +214,13 @@ function ProcessSection({ content }) {
   );
 }
 
-
 function ServiceStatement({ content }) {
   return (
     <section className="border-t border-neutral-700 bg-neutral-900 py-12 sm:py-16">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <p className="text-base leading-relaxed text-neutral-300">{content.serviceStatement.text}</p>
+        <p className="text-base leading-relaxed text-neutral-300">
+          {content.serviceStatement.text}
+        </p>
       </div>
     </section>
   );

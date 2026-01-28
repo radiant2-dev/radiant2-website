@@ -15,7 +15,10 @@ export default function OnPrem({ content, language }) {
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
           <h2 className="text-5xl font-semibold sm:text-6xl">{content.onPrem.hero.title}</h2>
-          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+          <h3
+            className="text-3xl font-mono"
+            style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+          >
             {content.onPrem.hero.subtitle}{' '}
             <Typewriter
               key={language}

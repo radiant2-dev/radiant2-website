@@ -14,7 +14,10 @@ export default function Workshops({ content, language }) {
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
           <h2 className="text-5xl font-semibold sm:text-6xl">{content.workshops.hero.title}</h2>
-          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+          <h3
+            className="text-3xl font-mono"
+            style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+          >
             {content.workshops.hero.subtitle}{' '}
             <Typewriter
               key={language}
@@ -56,7 +59,9 @@ export default function Workshops({ content, language }) {
       {/* FORMATS SECTION */}
       <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl space-y-12 px-6">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.workshops.formats.title}</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            {content.workshops.formats.title}
+          </h2>
           <div className="grid gap-12 sm:grid-cols-3">
             {content.workshops.formats.items.map((format, index) => {
               // Icon rendering logic based on format index
@@ -141,8 +146,12 @@ export default function Workshops({ content, language }) {
       <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl space-y-12 px-6">
           <div className="space-y-6">
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.workshops.whyUs.title}</h2>
-            <p className="text-base leading-relaxed text-neutral-300">{content.workshops.whyUs.body}</p>
+            <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+              {content.workshops.whyUs.title}
+            </h2>
+            <p className="text-base leading-relaxed text-neutral-300">
+              {content.workshops.whyUs.body}
+            </p>
           </div>
           <div className="grid gap-12 border-t border-neutral-700 pt-12 sm:grid-cols-3">
             {content.workshops.whyUs.stats.map((stat, index) => (

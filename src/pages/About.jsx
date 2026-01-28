@@ -18,7 +18,10 @@ export default function About({ content, language }) {
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
           <h2 className="text-5xl font-semibold sm:text-6xl">About Radiant²</h2>
-          <h3 className="text-3xl font-mono" style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}>
+          <h3
+            className="text-3xl font-mono"
+            style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
+          >
             Building AI solutions that work
           </h3>
         </div>
@@ -59,7 +62,9 @@ export default function About({ content, language }) {
                 <div className="space-y-3">
                   <div>
                     <h3 className="text-lg font-semibold text-white">{founder.name}</h3>
-                    <p className="text-xs uppercase tracking-wider text-neutral-400">{founder.role}</p>
+                    <p className="text-xs uppercase tracking-wider text-neutral-400">
+                      {founder.role}
+                    </p>
                   </div>
                   <p className="text-sm leading-relaxed text-neutral-300">{founder.bio}</p>
                   <div className="flex gap-4 pt-2">
@@ -96,9 +101,7 @@ export default function About({ content, language }) {
         <div className="mx-auto max-w-2xl space-y-8 px-6 text-center">
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold sm:text-4xl">Let's work together</h2>
-            <p className="text-base text-slate-600">
-              Ready to discuss your AI project?
-            </p>
+            <p className="text-base text-slate-600">Ready to discuss your AI project?</p>
           </div>
           <Link
             to="/contact"

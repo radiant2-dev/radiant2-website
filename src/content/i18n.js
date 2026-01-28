@@ -121,7 +121,15 @@ const translations = {
       title: 'Ready to start?',
       subtitle: "Not sure where to begin? Most of our clients weren't either.",
       typewriterPrefix: "Let's talk about",
-      typewriter: ['workshops', 'on-premise AI', 'your project', 'AI agents', 'automation', 'custom solutions', 'AI strategy'],
+      typewriter: [
+        'workshops',
+        'on-premise AI',
+        'your project',
+        'AI agents',
+        'automation',
+        'custom solutions',
+        'AI strategy',
+      ],
       primaryCta: 'Book a free 30-min call',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Prefer to write?',
@@ -217,7 +225,12 @@ const translations = {
       hero: {
         title: 'Custom AI built for your business',
         subtitle: 'End-to-end AI development',
-        typewriter: ['that scales', 'that works in production', 'built for your industry', 'from POC to deployment'],
+        typewriter: [
+          'that scales',
+          'that works in production',
+          'built for your industry',
+          'from POC to deployment',
+        ],
         cta: 'Discuss your project',
       },
       whatWeBuild: {
@@ -396,7 +409,12 @@ const translations = {
       hero: {
         title: 'AI on your infrastructure',
         subtitle: 'Private AI systems',
-        typewriter: ['for sensitive data', 'with full control', 'behind your firewall', 'air-gapped deployments'],
+        typewriter: [
+          'for sensitive data',
+          'with full control',
+          'behind your firewall',
+          'air-gapped deployments',
+        ],
         cta: 'Discuss your setup',
       },
     },
@@ -526,7 +544,15 @@ const translations = {
       title: 'Gotowy do startu?',
       subtitle: 'Nie wiesz, od czego zacząć? Większość naszych klientów też nie wiedziała.',
       typewriterPrefix: 'Porozmawiajmy o',
-      typewriter: ['warsztatach', 'AI on-premise', 'Twoim projekcie', 'agentach AI', 'automatyzacji', 'rozwiązaniach na zamówienie', 'strategii AI'],
+      typewriter: [
+        'warsztatach',
+        'AI on-premise',
+        'Twoim projekcie',
+        'agentach AI',
+        'automatyzacji',
+        'rozwiązaniach na zamówienie',
+        'strategii AI',
+      ],
       primaryCta: 'Umów pierwszą rozmowę (30 min)',
       calendlyUrl: 'https://calendly.com/radiant2-dev/30min',
       formHeading: 'Wolisz napisać?',
@@ -622,7 +648,12 @@ const translations = {
       hero: {
         title: 'AI szyte pod Twój biznes',
         subtitle: 'Kompleksowe rozwiązania AI',
-        typewriter: ['które skalują się', 'gotowe na produkcję', 'szyte pod Twoją branżę', 'od POC do wdrożenia'],
+        typewriter: [
+          'które skalują się',
+          'gotowe na produkcję',
+          'szyte pod Twoją branżę',
+          'od POC do wdrożenia',
+        ],
         cta: 'Porozmawiajmy',
       },
       whatWeBuild: {
@@ -807,7 +838,12 @@ const translations = {
       hero: {
         title: 'AI na Twojej infrastrukturze',
         subtitle: 'Prywatne systemy AI',
-        typewriter: ['dla wrażliwych danych', 'z pełną kontrolą', 'za twoim firewallem', 'systemy izolowane'],
+        typewriter: [
+          'dla wrażliwych danych',
+          'z pełną kontrolą',
+          'za twoim firewallem',
+          'systemy izolowane',
+        ],
         cta: 'Porozmawiajmy o setupie',
       },
     },
