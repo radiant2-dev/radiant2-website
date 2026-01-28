@@ -35,7 +35,7 @@ function HeroSection({ content, language }) {
 function ProblemSection({ content }) {
   return (
     <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl space-y-10 px-6">
+      <div className="mx-auto max-w-5xl space-y-10 px-6">
         <h2 className="text-3xl font-semibold sm:text-4xl">{content.problem.title}</h2>
         <ul className="space-y-4 text-slate-600">
           {content.problem.painPoints.map((point, index) => (

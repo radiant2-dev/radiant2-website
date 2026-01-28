@@ -5,6 +5,9 @@ const translations = {
     },
     nav: {
       services: 'Services',
+      workshops: 'Workshops',
+      projects: 'Projects',
+      onPremise: 'On-Premise',
       about: 'About',
       contact: 'Contact',
     },
@@ -197,6 +200,20 @@ const translations = {
         ],
       },
     },
+    about: {
+      hero: {
+        title: 'About Radiant²',
+        subtitle: 'Building AI solutions that work',
+      },
+      story: {
+        title: 'Our Story',
+      },
+      cta: {
+        title: "Let's work together",
+        subtitle: 'Ready to discuss your AI project?',
+        button: 'Get in touch',
+      },
+    },
     team: {
       title: 'Who we are',
       closing:
@@ -216,7 +233,7 @@ const translations = {
           role: 'Co-founder',
           bio: 'PhD candidate in AI for satellite systems. Built AI-based vision systems for the Intuition-1 satellite mission. Published researcher in aerospace and computer vision.',
           links: {
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/maciej-ziaja-86a422184/',
           },
         },
       ],
@@ -429,6 +446,9 @@ const translations = {
     },
     nav: {
       services: 'Usługi',
+      workshops: 'Warsztaty',
+      projects: 'Projekty',
+      onPremise: 'Lokalne AI',
       about: 'O nas',
       contact: 'Kontakt',
     },
@@ -620,6 +640,20 @@ const translations = {
         ],
       },
     },
+    about: {
+      hero: {
+        title: 'O Radiant²',
+        subtitle: 'Budujemy rozwiązania AI, które działają',
+      },
+      story: {
+        title: 'Nasza historia',
+      },
+      cta: {
+        title: 'Współpracujmy razem',
+        subtitle: 'Gotowy, by omówić swój projekt AI?',
+        button: 'Skontaktuj się',
+      },
+    },
     team: {
       title: 'Zespół',
       closing:
@@ -639,7 +673,7 @@ const translations = {
           role: 'Współzałożyciel',
           bio: 'Doktorant — AI dla systemów satelitarnych. Twórca systemów wizyjnych AI dla misji Intuition-1. Autor publikacji z zakresu kosmonautyki i widzenia komputerowego.',
           links: {
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/maciej-ziaja-86a422184/',
           },
         },
       ],

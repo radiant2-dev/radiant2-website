@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function About({ content }) {
+export default function About({ content, language }) {
   const founderPhotos = {
     'Wojciech Ptasiński': '/wojtek.png',
     'Maciej Ziaja': '/maciek.png',
   };
 
   useEffect(() => {
-    document.title = 'About Us | Radiant2';
-  }, []);
+    document.title = language === 'pl' ? 'O nas | Radiant2' : 'About Us | Radiant2';
+  }, [language]);
 
   return (
     <main>
@@ -17,21 +17,21 @@ export default function About({ content }) {
       <section className="relative min-h-[520px] bg-[url('/hero_background.jpg')] bg-cover bg-center py-20">
         <div className="absolute inset-0 bg-white/10" aria-hidden="true"></div>
         <div className="relative mx-auto max-w-5xl space-y-3 px-6 pt-6">
-          <h2 className="text-5xl font-semibold sm:text-6xl">About Radiant²</h2>
+          <h2 className="text-5xl font-semibold sm:text-6xl">{content.about.hero.title}</h2>
           <h3
             className="text-3xl font-mono"
             style={{ textShadow: '0 0 64px rgba(255, 255, 255, 0.6)' }}
           >
-            Building AI solutions that work
+            {content.about.hero.subtitle}
           </h3>
         </div>
       </section>
 
       {/* OUR STORY SECTION */}
       <section className="border-t border-slate-200 bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl space-y-12 px-6">
+        <div className="mx-auto max-w-5xl space-y-12 px-6">
           <div className="space-y-6">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Our Story</h2>
+            <h2 className="text-3xl font-semibold sm:text-4xl">{content.about.story.title}</h2>
             <blockquote className="border-l-2 border-slate-300 pl-6 text-lg italic leading-relaxed text-slate-700">
               "{content.team.closing}"
             </blockquote>
@@ -41,7 +41,7 @@ export default function About({ content }) {
 
       {/* TEAM SECTION */}
       <section className="border-t border-neutral-700 bg-neutral-900 py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl space-y-16 px-6">
+        <div className="mx-auto max-w-5xl space-y-16 px-6">
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">{content.team.title}</h2>
           <div className="grid gap-16 sm:grid-cols-2">
             {content.team.founders.map((founder, index) => (
@@ -100,14 +100,14 @@ export default function About({ content }) {
       <section className="border-t border-slate-200 bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-2xl space-y-8 px-6 text-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Let's work together</h2>
-            <p className="text-base text-slate-600">Ready to discuss your AI project?</p>
+            <h2 className="text-3xl font-semibold sm:text-4xl">{content.about.cta.title}</h2>
+            <p className="text-base text-slate-600">{content.about.cta.subtitle}</p>
           </div>
           <Link
             to="/contact"
             className="inline-block bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-neutral-700 sm:px-12 sm:py-5 sm:text-lg"
           >
-            Get in touch
+            {content.about.cta.button}
           </Link>
         </div>
       </section>

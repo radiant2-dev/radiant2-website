@@ -23,9 +23,9 @@ function Header({ content, language, onLanguageChange }) {
   const location = useLocation();
 
   const navLinks = [
-    { to: '/workshops', label: 'Workshops' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/on-prem', label: 'On-Prem' },
+    { to: '/workshops', label: content.nav.workshops },
+    { to: '/projects', label: content.nav.projects },
+    { to: '/on-prem', label: content.nav.onPremise },
     { to: '/about', label: content.nav.about },
     { to: '/contact', label: content.nav.contact },
   ];
