@@ -46,7 +46,7 @@ export default function About({ content, language }) {
           <div className="grid gap-16 sm:grid-cols-2">
             {content.team.founders.map((founder, index) => (
               <div key={index} className="space-y-6">
-                <div className="aspect-square w-full max-w-[240px] overflow-hidden bg-neutral-800">
+                <div className="aspect-[4/5] w-full max-w-[240px] overflow-hidden bg-neutral-800">
                   {founderPhotos[founder.name] ? (
                     <img
                       src={founderPhotos[founder.name]}
