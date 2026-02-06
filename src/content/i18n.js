@@ -143,7 +143,7 @@ const translations = {
         message: 'What do you need help with?',
         submit: 'Send message',
       },
-      email: 'Or email directly: radiant2.dev@gmail.com',
+      email: 'Or email directly: contact@radiant2.dev',
     },
     offer: {
       title: 'Our offer',
@@ -297,7 +297,7 @@ const translations = {
       cta: {
         title: 'Have a project in mind?',
         button: 'Book a call',
-        footer: 'Or email: radiant2.dev@gmail.com',
+        footer: 'Or email: contact@radiant2.dev',
       },
     },
     workshops: {
@@ -436,7 +436,7 @@ const translations = {
       },
     },
     footer: {
-      email: 'radiant2.dev@gmail.com',
+      email: 'contact@radiant2.dev',
       copyright: '© 2025 Radiant2',
     },
   },
@@ -496,7 +496,7 @@ const translations = {
     },
     positioning: {
       title: 'Mamy to przećwiczone.',
-      body: 'Szkoliliśmy zespoły, budowaliśmy produkcyjne systemy AI i wdrażaliśmy prywatną infrastrukturę — w branżach, gdzie nie ma miejsca na błędy.',
+      body: 'Szkoliliśmy zespoły, budowaliśmy produkcyjne systemy AI i wdrażaliśmy prywatną infrastrukturę -w branżach, gdzie nie ma miejsca na błędy.',
       stats: [
         {
           number: '500+',
@@ -551,7 +551,7 @@ const translations = {
           number: '3',
           title: 'Realizujemy',
           description:
-            'Warsztaty, systemy, infrastruktura — z regularnymi aktualizacjami i działającymi wynikami.',
+            'Warsztaty, systemy, infrastruktura -z regularnymi aktualizacjami i działającymi wynikami.',
         },
         {
           number: '4',
@@ -583,7 +583,7 @@ const translations = {
         message: 'Czego potrzebujesz?',
         submit: 'Wyślij',
       },
-      email: 'Lub mailowo: radiant2.dev@gmail.com',
+      email: 'Lub mailowo: contact@radiant2.dev',
     },
     offer: {
       title: 'Nasza oferta',
@@ -671,7 +671,7 @@ const translations = {
         {
           name: 'Maciej Ziaja',
           role: 'Współzałożyciel',
-          bio: 'Doktorant — AI dla systemów satelitarnych. Twórca systemów wizyjnych AI dla misji Intuition-1. Autor publikacji z zakresu kosmonautyki i widzenia komputerowego.',
+          bio: 'Doktorant -AI dla systemów satelitarnych. Twórca systemów wizyjnych AI dla misji Intuition-1. Autor publikacji z zakresu kosmonautyki i widzenia komputerowego.',
           links: {
             linkedin: 'https://www.linkedin.com/in/maciej-ziaja-86a422184/',
           },
@@ -735,12 +735,12 @@ const translations = {
         ],
       },
       industries: {
-        text: 'Wdrażaliśmy AI w bankowości, aerospace i przemyśle — tam, gdzie nie ma miejsca na błędy.',
+        text: 'Wdrażaliśmy AI w bankowości, aerospace i przemyśle -tam, gdzie nie ma miejsca na błędy.',
       },
       cta: {
         title: 'Masz pomysł na projekt?',
         button: 'Umów rozmowę',
-        footer: 'Lub mailowo: radiant2.dev@gmail.com',
+        footer: 'Lub mailowo: contact@radiant2.dev',
       },
     },
     workshops: {
@@ -771,7 +771,7 @@ const translations = {
             title: 'Podstawy',
             content: [
               'Rynek AI: co działa, a co to hype',
-              'LLM-y, agenci, embeddingi — prosto wyjaśnione',
+              'LLM-y, agenci, embeddingi -prosto wyjaśnione',
               'Podstawy prompt engineeringu',
             ],
             tag: 'Dla: Każdego poziomu',
@@ -809,7 +809,7 @@ const translations = {
             content: [
               'Gdzie warto automatyzować',
               'Integracje przez API',
-              'Twoje przypadki — rozwiązane na żywo',
+              'Twoje przypadki -rozwiązane na żywo',
             ],
             tag: 'Dla: Zespołów z konkretnymi celami',
           },
@@ -865,7 +865,7 @@ const translations = {
         title: 'Zaprojektujmy Twój warsztat',
         subtitle: 'Opowiedz o zespole. Dobierzemy moduły i format.',
         button: 'Umów rozmowę',
-        footer: 'Lub mailowo: hello@radiant2.dev',
+        footer: 'Lub mailowo: contact@radiant2.dev',
       },
     },
     onPrem: {
@@ -882,7 +882,7 @@ const translations = {
       },
     },
     footer: {
-      email: 'radiant2.dev@gmail.com',
+      email: 'contact@radiant2.dev',
       copyright: '© 2025 Radiant2',
     },
   },
