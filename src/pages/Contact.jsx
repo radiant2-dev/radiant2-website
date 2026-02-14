@@ -44,7 +44,11 @@ export default function Contact({ content, language }) {
               {content.contact.formHeading}
             </h2>
 
-            <form className="space-y-6">
+            <form
+              className="space-y-6"
+              action="https://contact-email-worker.radiant2.workers.dev"
+              method="POST"
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -55,6 +59,7 @@ export default function Contact({ content, language }) {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   required
                   className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
@@ -69,6 +74,7 @@ export default function Contact({ content, language }) {
                 <input
                   type="email"
                   id="email"
+                  name="clientEmail"
                   required
                   className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
@@ -83,6 +89,7 @@ export default function Contact({ content, language }) {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
               </div>
@@ -95,6 +102,7 @@ export default function Contact({ content, language }) {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows="6"
                   className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
