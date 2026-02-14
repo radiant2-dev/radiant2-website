@@ -61,7 +61,7 @@ export default function Contact({ content, language }) {
                   id="name"
                   name="name"
                   required
-                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-2 py-2 text-sm text-left focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
               </div>
               <div>
@@ -76,7 +76,7 @@ export default function Contact({ content, language }) {
                   id="email"
                   name="clientEmail"
                   required
-                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-2 py-2 text-sm text-left focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
               </div>
               <div>
@@ -90,7 +90,7 @@ export default function Contact({ content, language }) {
                   type="text"
                   id="company"
                   name="company"
-                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-2 py-2 text-sm text-left focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
               </div>
               <div>
@@ -105,7 +105,7 @@ export default function Contact({ content, language }) {
                   name="message"
                   required
                   rows="6"
-                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-0 py-2 text-sm text-center focus:border-neutral-900 focus:outline-none focus:ring-0"
+                  className="mt-2 block w-full border-b border-slate-300 bg-transparent px-2 py-2 text-sm text-left focus:border-neutral-900 focus:outline-none focus:ring-0"
                 />
               </div>
               <button
